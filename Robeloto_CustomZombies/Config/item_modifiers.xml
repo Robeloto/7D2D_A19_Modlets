@@ -1,0 +1,21 @@
+<configs>
+
+<append xpath="/item_modifiers">
+
+<item_modifier name="modVehicleMega" installable_tags="vehicle" modifier_tags="test" type="attachment">
+<property name="CreativeMode" value="Dev"/>
+<property name="UnlockedBy" value="modVehicleMegaSchematic"/>
+<property name="CustomIcon" value="armorSantaHat"/>
+<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+<effect_group tiered="false">
+<passive_effect name="VehicleFuelUsePer" operation="perc_set" value="0"/>
+<passive_effect name="LightIntensity" operation="perc_set" value="3"/>
+<passive_effect name="VehicleVelocityMaxPer" operation="perc_set" value="0"/>
+<passive_effect name="VehicleVelocityMaxTurboPer" operation="perc_set" value="0"/>
+</effect_group>
+</item_modifier>
+
+</append>
+
+</configs>

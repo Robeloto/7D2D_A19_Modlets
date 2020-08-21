@@ -1,0 +1,76 @@
+
+<configs>
+<append xpath="/quests">
+
+<quest id="rchallenge_KillTheMummy">
+		<property name="name_key" value="Kill The Mummy!"/>
+		<property name="subtitle_key" value="Kill The Mummy"/>
+		<property name="description_key" value="rchallenge_KillTheMummy_description"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="rchallenge_KillTheMummy_offer"/>
+		<property name="completion_key" value="challenge_KillTheMummy_completion" />		
+		<property name="difficulty" value="insane"/>
+		<property name="completiontype" value="TurnIn"/>
+
+		<objective type="RandomGoto" value="300-700" phase="1">
+			<property name="completion_distance" value="50"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="2"/>
+		</objective>
+
+		<action type="SpawnEnemy" id="zombieMummy" value="2" phase="3"/>
+		<objective type="ZombieKill" id="zombieMummy" value="1" phase="3"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+		</objective>
+
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+	    <reward type="Item" id="medicalPlasterCast" value="2"/>		
+	</quest>
+
+<quest id="rchallenge_KillSomeGhosts">
+		<property name="name_key" value="Kill Some Ghosts!"/>
+		<property name="subtitle_key" value="Kill Some Ghosts!"/>
+		<property name="description_key" value="rchallenge_KillSomeGhosts_description"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="challenge"/>
+		<property name="offer_key" value="rchallenge_KillSomeGhosts_offer"/>
+		<property name="completion_key" value="rchallenge_KillSomeGhosts_completion" />		
+		<property name="difficulty" value="insane"/>
+		<property name="completiontype" value="TurnIn"/>
+
+		<objective type="RandomGoto" value="300-700" phase="1">
+			<property name="completion_distance" value="50"/>
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="2"/>
+		</objective>
+
+		<action type="SpawnEnemy" id="zombieSpectre" value="2" phase="3"/>
+		
+		<objective type="ZombieKill" id="zombieSpectre" value="1" phase="3"/>
+		
+		<action type="SpawnEnemy" id="zombieSpectreGirl" value="2" phase="4"/>
+		
+		<objective type="ZombieKill" id="zombieSpectreGirl" value="1" phase="4"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="5"/>
+		</objective>
+
+		<reward type="Exp" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="2500"/>
+	    <reward type="Item" id="medicalFirstAidKit" value="1"/>		
+	</quest>
+</append>
+</configs>
