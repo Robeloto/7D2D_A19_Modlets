@@ -1,0 +1,3 @@
+<configs>
+<set xpath="/Sounds/SoundDataNode[@name='electric_arc_lp']/MaxVoices/@value">0</set>	
+</configs>
