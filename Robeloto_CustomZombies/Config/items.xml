@@ -27,12 +27,12 @@
 <!-- ITEMS -->
 
 <item name="gunToolSuperNailgun"> 
-	<property name="Extends" value="meleeToolRepairT3Nailgun"/>	<!-- gunToolNailgun -->
+	<property name="Extends" value="meleeToolRepairT3Nailgun"/>	<!-- meleeToolRepairT3Nailgun -->
 	<property name="Tags" value="tool,nailgun,sideAttachments,selfLoading,canHaveCosmetic"/>
 	<property name="DisplayType" value="meleeRepairTool"/>
 	<property name="HoldType" value="37"/>
 	<property name="Meshfile" value="#Other/Items?Tools/nailgunPrefab.prefab"/>
-	<property name="CustomIcon" value="gunToolNailgun"/>	
+	<property name="CustomIcon" value="meleeToolRepairT3Nailgun"/>	
 	<property name="CustomIconTint" value="187802"/>	
 	<property name="UnlockedBy" value="perkAdvancedEngineering,gunToolSuperNailgunSchematic"/>
 	<property name="ShowQuality" value="true"/>
@@ -212,7 +212,7 @@
 <item name="gunToolSuperNailgunSchematic">
 	<property name="Extends" value="schematicNoQualityRecipeMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="gunToolNailgun"/> <property name="CustomIconTint" value="187802"/>
+	<property name="CustomIcon" value="meleeToolRepairT3Nailgun"/> <property name="CustomIconTint" value="187802"/>
 	<property name="Unlocks" value="gunToolSuperNailgun"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunToolSuperNailgun" operation="set" value="1"/>
