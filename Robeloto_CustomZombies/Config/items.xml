@@ -515,7 +515,7 @@
 </item>	
 
 <item name="ammoProjectilePhoenixVomit">
-	<property name="Meshfile" value="particleeffects/p_fire_small"/>
+	<property name="Meshfile" value="particleeffects/p_electric_shock"/>
 	<property name="Material" value="Morganic" />
 	<property name="CreativeMode" value="None"/>
 	<property class="Action1">
