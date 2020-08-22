@@ -363,7 +363,7 @@
 </item>
 
 <item name="ammoProjectileBurningPhoenixVomit">
-	<property name="Meshfile" value="prefabs/prefabexplosion10"/> 
+	<property name="Meshfile" value="particleeffects/p_electric_shock"/>
 	<property name="Material" value="Morganic"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="Action1">
@@ -515,7 +515,7 @@
 </item>	
 
 <item name="ammoProjectilePhoenixVomit">
-	<property name="Meshfile" value="particleeffects/p_electric_shock"/>
+	<property name="Meshfile" value="particleeffects/p_fire_small"/>
 	<property name="Material" value="Morganic" />
 	<property name="CreativeMode" value="None"/>
 	<property class="Action1">
@@ -667,7 +667,7 @@
 </item>
 
 <item name="ammoProjectileFireFlyVomit">
-	<property name="Meshfile" value="prefabs/prefabexplosion10"/>
+	<property name="Meshfile" value="particleeffects/p_electric_shock"/>
 	<property name="Material" value="Morganic"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="Action1">
@@ -689,10 +689,7 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".90" tags="buffBurningMolotov"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".90" tags="buffBurningMolotov"/>	
 	</effect_group>
 </item>
 
@@ -826,10 +823,7 @@
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>		
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.9" tags="buffAnesthesia"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value="0.9" tags="buffAnesthesia"/>	
 	</effect_group>
 </item>	
 
@@ -895,10 +889,7 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>	
 		<passive_effect name="BuffProcChance" operation="base_set" value="0.70" tags="buffDrowning04"/>			
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.05" tags="buffInfectionCatch"/>	
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value="0.05" tags="buffInfectionCatch"/>		
 	</effect_group>
 </item>	
 
@@ -962,9 +953,6 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value="0.40" tags="buffBurningMolotov"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
 	</effect_group>	
 </item>
 
@@ -1031,10 +1019,7 @@
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.65" tags="buffBurningMolotov"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value="0.65" tags="buffBurningMolotov"/>		
 	</effect_group>	
 </item>
 
@@ -1077,7 +1062,7 @@
 </item>	
 
 <item name="firevomitBigProjectile">
-	<property name="Meshfile" value="prefabs/prefabexplosion10"/> 
+	<property name="Meshfile" value="particleeffects/p_fire_small"/>
 	<property name="Material" value="Morganic" />
 	<property name="CreativeMode" value="None"/>
 	<property class="Action1">
@@ -1104,10 +1089,7 @@
 		<effect_group name="firevomitBigProjectile" tiered="false">
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.95" tags="buffBurningMolotov"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value="0.95" tags="buffBurningMolotov"/>		
 		</effect_group>	
 </item>	
 
@@ -1147,7 +1129,7 @@
 </item>	
 
 <item name="ArrowVomitProjectile">
-	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/flamingArrowPrefab.prefab"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/arrowPrefab.prefab"/>
 	<property name="Material" value="Morganic" />
 	<property name="CreativeMode" value="None"/>
 	<property class="Action1">
@@ -1169,10 +1151,7 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>		
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.60" tags="buffBurningMolotov"/>	
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value="0.60" tags="buffBurningMolotov"/>		
 	</effect_group>	
 </item>	
 
@@ -1238,10 +1217,7 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="buffInfectionCatch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="buffIce"/>		
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="buffIce"/>			
 	</effect_group>	
 </item>
 
@@ -1303,10 +1279,7 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value="0.20" tags="buffInjuryBleedingZombie"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.80" tags="buffInjuryStunnedX"/>		
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value="0.80" tags="buffInjuryStunnedX"/>			
 	</effect_group>	
 </item>	
 
@@ -1376,10 +1349,7 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value="0.70" tags="buffInfectionCatch"/>
-		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="40"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="40"/>	
 	</effect_group>
 </item>
 
@@ -1517,10 +1487,7 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value="0.30" tags="buffInjuryStunnedX"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.65" tags="buffPredator"/>	
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value="0.65" tags="buffPredator"/>		
 	</effect_group>	
 </item>	
 	
@@ -1587,10 +1554,7 @@
 		<passive_effect name="BuffProcChance" operation="base_set" value="0.20" tags="buffIllPneumonia01"/>			
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>		
-		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="70"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="70"/>		
 	</effect_group>
 </item>
 
@@ -1651,10 +1615,7 @@
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>		
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.50" tags="buffDark"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value="0.50" tags="buffDark"/>	
 	</effect_group>
 </item>
 
@@ -1751,10 +1712,7 @@
 		<effect_group name="ammoProjectileZombieElectricBolt" tiered="false">	
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.50" tags="buffShocked2"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
+		<passive_effect name="BuffProcChance" operation="base_set" value="0.50" tags="buffShocked2"/>	
 	</effect_group>	
 </item>
 
@@ -1815,9 +1773,6 @@
 		<effect_group name="ammoProjectileZombieScreamerVomit" tiered="false">
 		<passive_effect name="BuffProcChance" operation="base_set" value="0.01" tags="buffInfectionCatch"/>
 		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="70"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->		
 	</effect_group>
 </item>
 
