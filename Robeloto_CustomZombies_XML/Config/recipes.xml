@@ -5,12 +5,12 @@
 	<ingredient name="unit_iron" count="4"/>
 </recipe>
 
-<recipe name="drugAntibioticsAmoxil" count="4" craft_area="chemistryStation" tags="learnable,perkYeahScience,chemStationCrafting">
+<recipe name="drugAntibioticsAmoxil" count="4" craft_area="chemistryStation" tags="learnable,perkPhysician,chemStationCrafting">
 	<ingredient name="AmoxilIngredientParts1" count="1"/>
 	<ingredient name="AmoxilIngredientParts2" count="1"/>	
 </recipe>
 
-<recipe name="AmoxilIngredientParts1" count="1" craft_area="chemistryStation" tags="learnable,perkYeahScience,chemStationCrafting">
+<recipe name="AmoxilIngredientParts1" count="1" craft_area="chemistryStation" tags="learnable,perkPhysician,chemStationCrafting">
 	<ingredient name="plantedPumpkin1" count="3"/>
 	<ingredient name="foodCornMeal" count="1"/>	
 	<ingredient name="resourceAnimalFat" count="1"/>
@@ -18,7 +18,7 @@
 	<ingredient name="drinkJarBeer" count="1"/>	
 </recipe>
 
-<recipe name="AmoxilIngredientParts2" count="1" craft_area="chemistryStation" tags="learnable,perkYeahScience,chemStationCrafting">
+<recipe name="AmoxilIngredientParts2" count="1" craft_area="chemistryStation" tags="learnable,perkPhysician,chemStationCrafting">
 	<ingredient name="resourceBone" count="1"/>
 	<ingredient name="foodRawMeat" count="1"/>	
 	<ingredient name="resourceHematite" count="1"/>

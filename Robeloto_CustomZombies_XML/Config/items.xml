@@ -162,7 +162,7 @@
 	<property name="EconomicValue" value="4"/>
 	<property name="CraftingIngredientTime" value="900"/>	
 	<property name="EconomicBundleSize" value="5"/>
-	<property name="UnlockedBy" value="perkYeahScience"/>	
+	<property name="UnlockedBy" value="perkPhysician"/>	
 	<property name="Group" value="Science,CFChemicals,Medical"/>	
 </item>
 
@@ -177,7 +177,7 @@
 	<property name="EconomicValue" value="4"/>
 	<property name="CraftingIngredientTime" value="900"/>
 	<property name="EconomicBundleSize" value="5"/>
-	<property name="UnlockedBy" value="perkYeahScience"/>	
+	<property name="UnlockedBy" value="perkPhysician"/>	
 	<property name="Group" value="Science,CFChemicals,Medical"/>		
 </item>
 
@@ -190,7 +190,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="EconomicValue" value="300"/>
 	<property name="Stacknumber" value="10"/> <!-- STK loot -->
-	<property name="UnlockedBy" value="perkYeahScience,drugAntibioticsAmoxilSchematic"/>
+	<property name="UnlockedBy" value="perkPhysician,drugAntibioticsAmoxilSchematic"/>
 	<property name="DisplayType" value="cureInfection"/>
 	<property name="CraftingIngredientTime" value="15000"/>	
 	<property name="Group" value="Science,CFChemicals,Medical"/>
