@@ -330,7 +330,6 @@
 	<!-- Gameplay -->
 	<property name="HandItem" value="meleeHandZombieGiant"/>
 <property name="ReplaceMaterial0" value="entities/gore/materials/torso_gore"/>
-<property name="ReplaceMaterial1" value="itemmodeffects/materials/melee_fire"/>
 	<property name="MoveSpeedAggro" value=".4, 1.4"/>	
 	<property name="SightRange" value="160"/>	
 	<property name="SizeScale" value="2.15"/>	
@@ -424,7 +423,7 @@
 
 <entity_class name="zombieMoePuker" extends="zombieTemplateMale">  
 	<property name="Tags" value="entity,zombie,walker"/>
-	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardMoeRagdoll.prefab"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardMoeHDRagdoll.prefab"/>
 	<property name="AvatarController" value="AvatarZombie01Controller"/>
 	<property name="ModelType" value="Standard"/>
 <property name="ReplaceMaterial0" value="particleeffects/models/materials/p_dirt"/>			
@@ -498,8 +497,7 @@
 <entity_class name="zombieMummy" extends="zombieTemplateMale">
 	<property name="Tags" value="entity,zombie"/>
 	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/> 		
-	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_wood"/>
-	<property name="ReplaceMaterial1" value="itemmodeffects/materials/melee_fire"/>		
+	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_wood"/>	
 	<property name="SizeScale" value="1.1"/>
 	<property name="AITask-1" value="BreakBlock"/>
 	<property name="AITask-2" value="Territorial"/>
@@ -631,7 +629,6 @@
     <property name="Tags" value="entity,zombie,walker"/>
     <property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardScreamerRagdoll.prefab"/>
 	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_glass"/>
-	<property name="ReplaceMaterial1" value="itemmodeffects/materials/melee_fire"/>	
 	<property name="AITask-1" value="BreakBlock"/>
 	<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=8"/> <!-- type,cooldown,duration -->
 	<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer"/>
@@ -918,7 +915,6 @@
 	<property name="SizeScale" value="2.1"/>	
 	<property name="SightRange" value="180"/>		
     <property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>
-	<property name="ReplaceMaterial0" value="itemmodeffects/materials/melee_fire"/> 
 
 
 	<property name="MoveSpeed" value=".8"/>
