@@ -363,7 +363,7 @@
 </item>
 
 <item name="ammoProjectileBurningPhoenixVomit">
-	<property name="Meshfile" value="particleeffects/p_electric_shock"/>
+	<property name="Meshfile" value="particleeffects/p_torch_wall"/> 
 	<property name="Material" value="Morganic"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="Action1">
