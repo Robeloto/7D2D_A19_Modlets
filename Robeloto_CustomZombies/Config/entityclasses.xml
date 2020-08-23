@@ -18,8 +18,8 @@
 <!-- ZOMBIES-->
 	<entity_class name="zombieAnesthesia" extends="zombieNurseFeral">
 	<property name="Tags" value="entity,zombie,walker,feral"/>
-	<property name="ReplaceMaterial0" value="entities/monsters/behemoth/materials/behemoth"/>
-	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>	
+<property name="ReplaceMaterial0" value="entities/animals/vulture/materials/vulture_v2"/>
+	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/feral_eye.mat"/>
 	<property name="WalkType" value="7"/>	
 	<property name="Mass" value="90"/>	
 	<property name="SizeScale" value="1"/>	
@@ -469,7 +469,7 @@
 <entity_class name="zombieMoePukerFeral" extends="zombieMoePuker">  
 	<property name="Tags" value="entity,zombie,walker,feral"/>
 	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_dirt"/>		
-	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/feral_eye.mat"/>
 
 	<!-- Gameplay -->
 	<property name="Explosion.ParticleIndex" value="3"/>
