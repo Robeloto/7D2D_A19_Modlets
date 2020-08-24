@@ -913,7 +913,8 @@
 	<property name="Tags" value="entity,animal,zombie,hostile,radiated"/>
 	<property name="Radiated" value=""/>
 	<property name="SizeScale" value="2.1"/>	
-	<property name="SightRange" value="180"/>		
+	<property name="SightRange" value="180"/>	
+	<property name="ReplaceMaterial0" value="itemmodeffects/materials/melee_fire"/> 	
     <property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>
 
 
