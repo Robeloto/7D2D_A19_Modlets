@@ -505,7 +505,7 @@
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
 		<passive_effect name="MaxRange" operation="base_set" value="100"/>
 		<passive_effect name="MagazineSize" operation="base_set" value="8"/>
-		<passive_effect name="BurstRoundCount" operation="base_set" value="3"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="4"/>
 		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
 		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
 		<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
@@ -667,14 +667,14 @@
 </item>
 
 <item name="ammoProjectileFireFlyVomit">
-	<property name="Meshfile" value="particleeffects/p_electric_shock"/>
+	<property name="Meshfile" value="particleeffects/p_fire_small"/>
 	<property name="Material" value="Morganic"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="Action1">
 		<property name="Class" value="Projectile"/>
 		<property name="DamageEntity" value="5"/>
 		<property name="DamageBlock" value="5"/>
-		<property name="Explosion.ParticleIndex" value="1"/> <!-- which Prefab/particle is used -->
+		<property name="Explosion.ParticleIndex" value="10"/> <!-- which Prefab/particle is used -->
 		<property name="Explosion.RadiusBlocks" value="3"/> <!-- damage radius for blocks -->
 		<property name="Explosion.BlockDamage" value="20"/> <!-- damage for blocks in the center of the explosion -->
 		<property name="Explosion.RadiusEntities" value="3"/> <!-- damage radius for entities -->
@@ -1695,7 +1695,7 @@
 		<property name="Class" value="Projectile"/>
 		<property name="DamageEntity" value="8"/>
 		<property name="DamageBlock" value="20"/>
-		<property name="Explosion.ParticleIndex" value="1"/> <!-- which Prefab/particle is used -->
+		<property name="Explosion.ParticleIndex" value="12"/> <!-- which Prefab/particle is used -->
 		<property name="Explosion.RadiusBlocks" value="3"/> <!-- damage radius for blocks -->
 		<property name="Explosion.BlockDamage" value="20"/> <!-- damage for blocks in the center of the explosion -->
 		<property name="Explosion.RadiusEntities" value="3"/> <!-- damage radius for entities -->
@@ -1760,7 +1760,7 @@
 		<property name="Velocity" value="12"/>
 		<property name="FlyTime" value="8"/>
 		<property name="LifeTime" value="8"/>	
-		<property name="Explosion.ParticleIndex" value="5"/>
+		<property name="Explosion.ParticleIndex" value="2"/>
 		<property name="Explosion.RadiusBlocks" value="4"/>
 		<property name="Explosion.BlockDamage" value="150"/>
 		<property name="Explosion.RadiusEntities" value="3"/>
