@@ -452,7 +452,7 @@
 
 	<!-- Gameplay -->
 	<property name="HandItem" value="meleehandZombieMoePuker" />
-	<property name="Explosion.ParticleIndex" value="3"/>
+	<property name="Explosion.ParticleIndex" value="13"/>
 	<property name="Explosion.RadiusBlocks" value="4"/>
 	<property name="Explosion.RadiusEntities" value="4"/>
 	<property name="Explosion.BlockDamage" value="555"/>
@@ -1075,8 +1075,7 @@
 	<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="35"/> <!-- animalZombieVulture -->
 	<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="70"/>	
 
-	<effect_group name="Base Effects">
-		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="PhoenixParticle"/>				
+	<effect_group name="Base Effects">			
 		<passive_effect name="HealthMax" operation="base_set" value="666"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".4"/> <!-- Feral damage -->
