@@ -256,7 +256,7 @@
 	<!-- Gameplay -->
 	<property name="HandItem" value="meleehandZombieBurningBoss"/>
 	<property name="ExperienceGain" value="7500"/> <!-- XP strong -->	
-	<property name="LootDropProb" value=".4"/>	
+	<property name="LootDropProb" value=".8"/>	
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
 	<effect_group name="Base Effects">	
 		<passive_effect name="HealthMax" operation="base_set" value="1024"/>
@@ -344,7 +344,7 @@
 	<property name="StompsSpikes" value="true"/>	
 	<property name="ExperienceGain" value="19000"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/>
+	<property name="LootDropProb" value=".9"/>
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="1700"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
@@ -383,7 +383,7 @@
 	<property name="HandItem" value="meleehandZombieGunner"/>
 	<property name="ExperienceGain" value="5000"/> <!-- XP strong -->	
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".37"/> 	
+	<property name="LootDropProb" value=".7"/> 	
 	<effect_group name="Base Effects">	
 		<passive_effect name="HealthMax" operation="base_set" value="800"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
@@ -571,7 +571,7 @@
 	<property name="StompsSpikes" value="true"/>	
 	<property name="ExperienceGain" value="10000"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".5"/>
+	<property name="LootDropProb" value=".7"/>
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="666"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
@@ -654,7 +654,7 @@
 	<property name="JumpMaxDistance" value="8, 16"/>	
 	<property name="ExperienceGain" value="10000"/> <!-- XP grunt feral -->	
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>	
-	<property name="LootDropProb" value=".4"/> 	
+	<property name="LootDropProb" value=".8"/> 	
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="1200"/>
@@ -839,9 +839,9 @@
 	<property name="JumpMaxDistance" value="10, 20"/>
     <property name="MoveSpeedAggro" value="1.2, 1.7"/>	
 	<property name="HandItem" value="meleeHandZombieWhiteNoise"/>
-	<property name="ExperienceGain" value="2200"/> <!-- XP strong -->
+	<property name="ExperienceGain" value="2900"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
-	<property name="LootDropProb" value=".15"/>	
+	<property name="LootDropProb" value=".35"/>	
 	<effect_group name="Base Effects">	
 		<passive_effect name="HealthMax" operation="base_set" value="330"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
