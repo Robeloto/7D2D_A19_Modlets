@@ -41,14 +41,14 @@
 		<duration value=".3"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffNoiseAOE02"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="30" buff="buffNoiseAOE"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="20" buff="buffNoiseAOE"/>
 		</effect_group>
 	</buff>
 	<buff name="buffNoiseAOE02" hidden="true">
 	    <duration value=".3"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffNoiseAOE01"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="30" buff="buffNoiseAOE"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="20" buff="buffNoiseAOE"/>
 		</effect_group>
 	</buff>
 	<buff name="buffNoiseAOE" name_key="" tooltip_key="White Noise has the ability to penalize you, if you used ranged weapons" icon="ui_game_symbol_muscle" icon_color="255,255,255" icon_blink="true">
@@ -105,9 +105,9 @@
 		<damage_type value="disease"/>
 		<stack_type value="replace"/><duration value="8"/>
 		<effect_group>		
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="shadowbuff" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" sound="shadowbuff" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="shadowbuff" play_in_head="true"/>		
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="horde_spawn_warning" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" sound="horde_spawn_warning" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="horde_spawn_warning" play_in_head="true"/>		
 		</effect_group>			
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="2" effect_name="FadeToBlack"/>
@@ -119,9 +119,9 @@
 		<damage_type value="disease"/>
 		<stack_type value="replace"/><duration value="6"/>
 		<effect_group>		
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="freezerbuff" play_in_head="true"/>		
-			<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" sound="freezerbuff" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="freezerbuff" play_in_head="true"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="horde_spawn_warning" play_in_head="true"/>		
+			<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" sound="horde_spawn_warning" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="horde_spawn_warning" play_in_head="true"/>	
 		</effect_group>	
 		<effect_group>
 			<requirement name="NotHasBuff" buff="buffBlackStrapCoffee"/>			
@@ -353,9 +353,9 @@
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
 
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="shockerbuff"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="shockerbuff"/>
-			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="shockerbuff"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="horde_spawn_warning"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="horde_spawn_warning"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="horde_spawn_warning"/>
 		</effect_group>
 	</buff>	
 	
