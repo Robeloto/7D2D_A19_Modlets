@@ -1923,8 +1923,8 @@
 	<property name="Candrop" value="false"/>
 	<property class="Action0"><!-- AttackAction -->
 		<property name="Class" value="Melee"/>
-		<property name="DamageEntity" value="10"/>
-		<property name="DamageBlock" value="66"/>		
+		<property name="DamageEntity" value="8"/>
+		<property name="DamageBlock" value="55"/>		
 		<property name="Delay" value="1"/> <!-- obsolete if rounds per minute exists -->
 		<property name="Range" value="1.85"/> 
 		<property name="Sphere" value="0.4"/>
@@ -1934,7 +1934,7 @@
 	</property>
 		<effect_group name="meleeHandZombieIronMan" tiered="false">	
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="1.65"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="buffNoise"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffNoise"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="buffInjuryStunnedX"/>		
 	</effect_group>
 </item>
