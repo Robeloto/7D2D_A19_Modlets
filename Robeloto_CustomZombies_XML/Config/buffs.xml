@@ -41,14 +41,14 @@
 		<duration value=".3"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffNoiseAOE02"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="30" buff="buffNoiseAOE"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="20" buff="buffNoiseAOE"/>
 		</effect_group>
 	</buff>
 	<buff name="buffNoiseAOE02" hidden="true">
 	    <duration value=".3"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffNoiseAOE01"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="30" buff="buffNoiseAOE"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="20" buff="buffNoiseAOE"/>
 		</effect_group>
 	</buff>
 	<buff name="buffNoiseAOE" name_key="" tooltip_key="White Noise has the ability to penalize you, if you used ranged weapons" icon="ui_game_symbol_muscle" icon_color="255,255,255" icon_blink="true">
