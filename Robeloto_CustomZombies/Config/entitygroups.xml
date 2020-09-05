@@ -30,7 +30,7 @@
 <entity name="zombieWhiteNoise" prob="0.05"/>		
 </append>
 <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
-<entity name="animalCopterCorpse" prob="0.05" />
+<entity name="animalCopterCorpse" prob="0.02" />
 <entity name="animalCloaker" prob="0.05" />
 <entity name="animalSkullBird" prob="0.04" />
 <entity name="animalFly" prob="0.11" />
@@ -71,7 +71,7 @@
 <!-- Zombies Hoard -->
 <append xpath="/entitygroups/entitygroup[@name='ZombiesHoard']">
 <entity name="animalCloaker" prob="0.1" />
-<entity name="animalCopterCorpse" prob="0.09" />
+<entity name="animalCopterCorpse" prob="0.04" />
 <entity name="animalDiamondPhoenix" prob="0.05" />
 <entity name="animalBurningPhoenix" prob="0.05"/>
 <entity name="animalSkullBird" prob="0.06" />
@@ -105,7 +105,7 @@
 <entity name="animalBurningPhoenix" prob="0.05"/>
 <entity name="animalCloaker" prob="0.1" />
 <entity name="animalChickenDemon" prob="0.06" />
-<entity name="animalCopterCorpse" prob="0.06" />
+<entity name="animalCopterCorpse" prob="0.04" />
 <entity name="animalDiamondPhoenix" prob="0.05" />
 <entity name="animalSkullBird" prob="0.04" />
 <entity name="animalWaterRaion" prob="0.05"/>
@@ -131,7 +131,7 @@
 <append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesWastelandNight')]">
 <entity name="animalChickenDemon" prob="0.1" />
 <entity name="animalCloaker" prob="0.1" />
-<entity name="animalCopterCorpse" prob="0.12" />
+<entity name="animalCopterCorpse" prob="0.1" />
 <entity name="animalBurningPhoenix" prob="0.08"/>
 <entity name="animalDiamondPhoenix" prob="0.08" />
 <entity name="animalSkullBird" prob="0.13" />
@@ -163,7 +163,7 @@
 <entity name="animalAnaconda" prob="0.09"/>	
 <entity name="animalCloaker" prob="0.1" />
 <entity name="animalChickenDemon" prob="0.09" />
-<entity name="animalCopterCorpse" prob="0.05" />
+<entity name="animalCopterCorpse" prob="0.03" />
 <entity name="animalBurningPhoenix" prob="0.05"/>
 <entity name="animalDiamondPhoenix" prob="0.05" />
 <entity name="animalFireSnake" prob="0.09"/>	
@@ -174,7 +174,7 @@
 <append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsForest']">
 <entity name="animalAnaconda" prob="0.05"/>	
 <entity name="animalBurningPhoenix" prob="0.05"/>
-<entity name="animalCopterCorpse" prob="0.04" />
+<entity name="animalCopterCorpse" prob="0.02" />
 <entity name="animalChickenDemon" prob="0.07" />
 <entity name="animalCloaker" prob="0.08" />
 <entity name="animalDiamondPhoenix" prob="0.05" />
@@ -187,7 +187,7 @@
 <entity name="animalBurningPhoenix" prob="0.05"/>
 <entity name="animalChickenDemon" prob="0.05" />
 <entity name="animalCloaker" prob="0.08" />
-<entity name="animalCopterCorpse" prob="0.05" />
+<entity name="animalCopterCorpse" prob="0.02" />
 <entity name="animalDiamondPhoenix" prob="0.05" />
 <entity name="animalSkullBird" prob="0.06" />
 <entity name="animalWaterRaion" prob="0.03"/>
@@ -197,7 +197,7 @@
 <entity name="animalBurningPhoenix" prob="0.06"/>
 <entity name="animalCloaker" prob="0.08" />
 <entity name="animalChickenDemon" prob="0.1" />
-<entity name="animalCopterCorpse" prob="0.06" />
+<entity name="animalCopterCorpse" prob="0.04" />
 <entity name="animalDiamondPhoenix" prob="0.06" />
 <entity name="animalFireSnake" prob="0.05"/>
 <entity name="animalFly" prob="0.1" />
@@ -215,7 +215,7 @@
 <entity name="animalBurningPhoenix" prob="0.04"/>
 <entity name="animalChickenDemon" prob="0.1" />
 <entity name="animalCloaker" prob="0.08" />
-<entity name="animalCopterCorpse" prob="0.05" />
+<entity name="animalCopterCorpse" prob="0.04" />
 <entity name="animalDiamondPhoenix" prob="0.04" />
 <entity name="animalFly" prob="0.15" />	
 <entity name="animalFireSnake" prob="0.04"/>
@@ -379,7 +379,7 @@
 <!-- Wandering Horde -->
 <append xpath="/entitygroups/entitygroup[contains(@name, 'wanderingHorde')]">
 <entity name="animalCloaker" prob="0.1" />
-<entity name="animalCopterCorpse" prob="0.05" />
+<entity name="animalCopterCorpse" prob="0.03" />
 <entity name="animalSkullBird" prob="0.06" />
 <entity name="animalWaterRaion" prob="0.05"/>
 <entity name="animalFly" prob="0.18"/>
