@@ -1204,7 +1204,7 @@
 <entity_class name="animalSkullBird" extends="animalZombieVultureRadiated">
 	<property name="Tags" value="entity,animal,zombie,hostile,radiated"/>
 	<property name="Radiated" value=""/>
-	<property name="SizeScale" value="0.35"/>	
+	<property name="SizeScale" value="0.45"/>	
 	<property name="SightRange" value="180"/>		
     <property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>
 	<property name="SoundRandom" value=""/>
