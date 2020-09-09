@@ -315,7 +315,7 @@
 		<property name="Sphere" value="2"/>
 		<property name="Block_range" value="5"/>		
 		<property name="DamageEntity" value="40"/>
-		<property name="DamageBlock" value="400"/>
+		<property name="DamageBlock" value="200"/>
 		<property name="Buff" value="buffInjuryBleeding,buffInfectionCatch"/>
 		<property name="Buff_chance" value="0.2,0.8"/>
 	</property>
@@ -369,17 +369,17 @@
 	<property class="Action1">
 		<property name="Class" value="Projectile"/>
 		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="210"/>
+		<property name="DamageBlock" value="155"/>
 		<property name="Explosion.ParticleIndex" value="11"/>
 		<property name="Explosion.RadiusBlocks" value="4"/>
-		<property name="Explosion.BlockDamage" value="200"/>
+		<property name="Explosion.BlockDamage" value="140"/>
 		<property name="Explosion.RadiusEntities" value="4"/>
 		<property name="Explosion.EntityDamage" value="50"/>
 		<property name="Explosion.DamageBonus.water" value="0"/>
 		<property name="Explosion.DamageBonus.earth" value="0"/>
-		<property name="DamageBonus.stone" value="100"/>		
-		<property name="DamageBonus.metal" value="150"/>
-		<property name="DamageBonus.wood" value="80"/>		
+		<property name="DamageBonus.stone" value="80"/>		
+		<property name="DamageBonus.metal" value="85"/>
+		<property name="DamageBonus.wood" value="100"/>		
 		<property name="Velocity" value="14"/>
 		<property name="FlyTime" value="10"/>
 		<property name="LifeTime" value="14"/>
@@ -486,7 +486,7 @@
 	<property class="Action0">
 		<property name="Range" value="2.1"/>
 		<property name="DamageEntity" value="25"/>
-		<property name="DamageBlock" value="365"/>
+		<property name="DamageBlock" value="200"/>
 		<property name="Buff" value="buffShocked2,buffInjuryStunned01"/>		
 	</property>
 	<property class="Action1"> <!-- UseAction -->
@@ -1034,7 +1034,7 @@
 		<property name="Sphere" value="0.3"/>
 		<property name="Block_range" value="5.5"/>
 		<property name="DamageEntity" value="30"/>
-		<property name="DamageBlock" value="300"/>
+		<property name="DamageBlock" value="195"/>
 		<property name="Buff" value="buffArmBroken,buffBurningMolotov"/>		
 	</property>
 	<property class="Action1"> <!-- UseAction -->
@@ -1068,17 +1068,17 @@
 	<property class="Action1">
 		<property name="Class" value="Projectile"/>
 		<property name="DamageEntity" value="15"/>
-		<property name="DamageBlock" value="100"/>
+		<property name="DamageBlock" value="95"/>
 		<property name="Explosion.ParticleIndex" value="2"/> <!-- which Prefab/particle is used -->
 		<property name="Explosion.RadiusBlocks" value="4"/> <!-- damage radius for blocks -->
-		<property name="Explosion.BlockDamage" value="100"/> <!-- damage for blocks in the center of the explosion -->
+		<property name="Explosion.BlockDamage" value="70"/> <!-- damage for blocks in the center of the explosion -->
 		<property name="Explosion.RadiusEntities" value="4"/> <!-- damage radius for entities -->
 		<property name="Explosion.EntityDamage" value="40"/> <!-- damage for entities in the center of the explosion. Zombies take 2x this damage. -->					
 		<property name="DamageBonus.earth" value="0"/>	
 		<property name="DamageBonus.water" value="0"/>	
-		<property name="DamageBonus.wood" value="50"/>
-	    <property name="DamageBonus.stone" value="80"/>		
-		<property name="DamageBonus.metal" value="100"/>
+		<property name="DamageBonus.wood" value="105"/>
+	    <property name="DamageBonus.stone" value="70"/>		
+		<property name="DamageBonus.metal" value="75"/>
 		<property name="Velocity" value="15"/>
 		<property name="FlyTime" value="0.6"/>
 		<property name="LifeTime" value="4"/>
@@ -1100,7 +1100,7 @@
 	<property class="Action0">
 		<property name="Range" value="1.80"/>
 		<property name="DamageEntity" value="18"/>
-		<property name="DamageBlock" value="333"/>
+		<property name="DamageBlock" value="60"/>
 		<property name="Buff" value="buffBurningMolotov,buffInjuryStunned01"/>		
 	</property>
 	<property class="Action1"> <!-- UseAction -->
@@ -1228,7 +1228,7 @@
 	<property class="Action0">
 		<property name="Range" value="2.1"/>
 		<property name="DamageEntity" value="22"/>
-		<property name="DamageBlock" value="365"/>
+		<property name="DamageBlock" value="190"/>
 		<property name="Buff" value="buffArmBroken,buffInjuryStunned01"/>		
 	</property>
 	<property class="Action1"> <!-- UseAction -->
@@ -1361,7 +1361,7 @@
 	<property class="Action0">
 		<property name="Range" value="1.75"/>
 		<property name="DamageEntity" value="30"/>
-		<property name="DamageBlock" value="200"/>
+		<property name="DamageBlock" value="80"/>
 		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,buffInjuryStunned01"/>		
 	</property>
 	<property class="Action1"> <!-- UseAction -->
@@ -1435,7 +1435,7 @@
 	<property class="Action0">
 		<property name="Range" value="2.1"/>
 		<property name="DamageEntity" value="28"/>
-		<property name="DamageBlock" value="200"/>
+		<property name="DamageBlock" value="160"/>
 		<property name="Buff" value="buffInjuryStunnedX,buffInjuryOpenWound"/>		
 	</property>
 	<property class="Action1"> <!-- UseAction -->
@@ -1722,7 +1722,7 @@
 	<property class="Action0">
 		<property name="Range" value="1.75"/>	
 		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="200"/>
+		<property name="DamageBlock" value="90"/>
 	</property>
 	<property class="Action1"> <!-- Fire action -->
 		<property name="Class" value="Vomit"/>
@@ -1762,13 +1762,13 @@
 		<property name="LifeTime" value="8"/>	
 		<property name="Explosion.ParticleIndex" value="2"/>
 		<property name="Explosion.RadiusBlocks" value="4"/>
-		<property name="Explosion.BlockDamage" value="150"/>
+		<property name="Explosion.BlockDamage" value="100"/>
 		<property name="Explosion.RadiusEntities" value="3"/>
 		<property name="Explosion.EntityDamage" value="40"/>
 		<property name="Explosion.DamageBonus.water" value="0"/>
-		<property name="DamageBonus.stone" value="100"/>		
-		<property name="DamageBonus.metal" value="150"/>
-		<property name="DamageBonus.earth" value="0"/>				
+		<property name="DamageBonus.stone" value="90"/>		
+		<property name="DamageBonus.metal" value="95"/>
+		<property name="DamageBonus.wood" value="110"/>				
 	</property>
 		<effect_group name="ammoProjectileZombieScreamerVomit" tiered="false">
 		<passive_effect name="BuffProcChance" operation="base_set" value="0.01" tags="buffInfectionCatch"/>
@@ -1846,7 +1846,7 @@
 		<property name="Sphere" value="0.3"/>
 		<property name="Block_range" value="6"/>
 		<property name="DamageEntity" value="65"/>
-		<property name="DamageBlock" value="10000"/>
+		<property name="DamageBlock" value="1500"/>
 		<property name="Buff" value="buffArmBroken,buffInjuryStunned01"/>			
 		<property name="Sound_start" value="swoosh"/>
 	</property>
@@ -1873,7 +1873,7 @@
 		<property name="Sphere" value="0.4"/>
 		<property name="Block_range" value="2.4"/>
 		<property name="DamageEntity" value="41"/>
-		<property name="DamageBlock" value="250"/>
+		<property name="DamageBlock" value="100"/>
 		<property name="Buff" value="buffArmBroken,buffInjuryOpenWound,buffInjuryKnockdown01"/>			
 		<property name="Sound_start" value="swoosh"/>
 	</property>
@@ -1901,7 +1901,7 @@
 		<property name="Sphere" value="0.5"/>
 		<property name="Block_range" value="5.5"/>
 		<property name="DamageEntity" value="28"/>
-		<property name="DamageBlock" value="250"/>
+		<property name="DamageBlock" value="180"/>
 		<property name="Buff" value="buffArmBroken,buffInjuryStunned01"/>			
 		<property name="Sound_start" value="swoosh"/>
 	</property>
@@ -2004,7 +2004,7 @@
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
 		<property name="DamageEntity" value="40"/>
-		<property name="DamageBlock" value="200"/>
+		<property name="DamageBlock" value="150"/>
 	</property>
 	<property class="Action1"> <!-- Fire action -->
 		<property name="Magazine_items" value="ammoProjectileZombieVomitFeral"/>
