@@ -334,7 +334,7 @@
 	<property class="Action0">
 		<property name="Delay" value="0.7"/> <!-- obsolete if rounds per minute exists -->
 		<property name="DamageEntity" value="30"/>
-		<property name="DamageBlock" value="600"/>
+		<property name="DamageBlock" value="222"/>
 		<property name="Buff" value="buffBurningMolotov,buffInjuryBleeding,buffInfectionCatch"/>
 	</property>
 	<property class="Action1">
@@ -369,10 +369,10 @@
 	<property class="Action1">
 		<property name="Class" value="Projectile"/>
 		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="155"/>
+		<property name="DamageBlock" value="125"/>
 		<property name="Explosion.ParticleIndex" value="11"/>
 		<property name="Explosion.RadiusBlocks" value="4"/>
-		<property name="Explosion.BlockDamage" value="140"/>
+		<property name="Explosion.BlockDamage" value="115"/>
 		<property name="Explosion.RadiusEntities" value="4"/>
 		<property name="Explosion.EntityDamage" value="50"/>
 		<property name="Explosion.DamageBonus.water" value="0"/>
@@ -1037,7 +1037,7 @@
 		<property name="Sphere" value="0.3"/>
 		<property name="Block_range" value="5.5"/>
 		<property name="DamageEntity" value="30"/>
-		<property name="DamageBlock" value="300"/>
+		<property name="DamageBlock" value="195"/>
 		<property name="Buff" value="buffArmBroken,buffBurningMolotov"/>		
 	</property>
 	<property class="Action1"> <!-- UseAction -->
@@ -1071,15 +1071,15 @@
 	<property class="Action1">
 		<property name="Class" value="Projectile"/>
 		<property name="DamageEntity" value="15"/>
-		<property name="DamageBlock" value="95"/>
+		<property name="DamageBlock" value="105"/>
 		<property name="Explosion.ParticleIndex" value="2"/> <!-- which Prefab/particle is used -->
 		<property name="Explosion.RadiusBlocks" value="4"/> <!-- damage radius for blocks -->
-		<property name="Explosion.BlockDamage" value="80"/> <!-- damage for blocks in the center of the explosion -->
+		<property name="Explosion.BlockDamage" value="99"/> <!-- damage for blocks in the center of the explosion -->
 		<property name="Explosion.RadiusEntities" value="4"/> <!-- damage radius for entities -->
 		<property name="Explosion.EntityDamage" value="40"/> <!-- damage for entities in the center of the explosion. Zombies take 2x this damage. -->					
 		<property name="DamageBonus.earth" value="0"/>	
 		<property name="DamageBonus.water" value="0"/>	
-		<property name="DamageBonus.wood" value="105"/>
+		<property name="DamageBonus.wood" value="100"/>
 	    <property name="DamageBonus.stone" value="70"/>		
 		<property name="DamageBonus.metal" value="75"/>
 		<property name="Velocity" value="15"/>
@@ -1722,7 +1722,7 @@
 	<property class="Action0">
 		<property name="Range" value="1.75"/>	
 		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="200"/>
+		<property name="DamageBlock" value="140"/>
 	</property>
 	<property class="Action1"> <!-- Fire action -->
 		<property name="Class" value="Vomit"/>
@@ -1756,7 +1756,7 @@
 	<property class="Action1">
 		<property name="Class" value="Projectile"/>	
 		<property name="DamageEntity" value="30"/>
-		<property name="DamageBlock" value="150"/>
+		<property name="DamageBlock" value="130"/>
 		<property name="Velocity" value="12"/>
 		<property name="FlyTime" value="8"/>
 		<property name="LifeTime" value="8"/>	
