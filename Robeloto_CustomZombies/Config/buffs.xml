@@ -412,7 +412,7 @@
 			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Vehicles/Gyrocopter/gyrocopter_start"/>	
 			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="Vehicles/Gyrocopter/gyrocopter_med_lp"/>			
 			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_gunfire_ak47" local_offset="0,-.2,1.45" local_rotation="35,360,0" parent_transform="Head"/>					
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?gyrocopter_Prefab.prefab" local_offset="0,-.65,-.6" local_rotation="35,360,0" parent_transform="Head"/>		
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?gyrocopter_Prefab.prefab" local_offset="0,-.28,-.6" local_rotation="35,360,0" parent_transform="Head"/>		
 			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Entities/Zombies?Zombies/corpse3Prefab.prefab" local_offset="0,.1,1" local_rotation="35,360,0" parent_transform="Head"/>																					
 			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="entities/traps/autoturret/auto_turret" local_offset="0,-.37,.6" local_rotation="35,360,0" parent_transform="Head"/>	
 			<triggered_effect trigger="onSelfDied" action="AttachParticleEffectToEntity" particle="p_fire_small" local_offset="0,.01,-.45" local_rotation="35,360,0" parent_transform="Head"/>		
