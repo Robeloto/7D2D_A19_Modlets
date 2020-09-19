@@ -1024,7 +1024,7 @@
 <entity_class name="animalCopterCorpse" extends="animalZombieVultureRadiated">
 	<property name="Tags" value="entity,animal,zombie,hostile,radiated"/>
 	<property name="Radiated" value=""/>
-	<property name="SizeScale" value="1.1"/>	
+	<property name="SizeScale" value="1.15"/>	
 	<property name="SightRange" value="180"/>
 	<property name="SurfaceCategory" value="metal"/>	
     <property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>
