@@ -190,92 +190,7 @@
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Drunk"/>
 			</effect_group>				
 	 </buff>
-
-	<buff name="buffLegBroken" name_key="buffLegBrokenName" description_key="buffLegBrokenDesc" tooltip_key="buffLegBrokenTooltip" icon="ui_game_symbol_brokenbone" icon_color="255,0,0">
-		<!-- Note: sprinting with a broken leg could randomly rangdoll the player -->
-		<damage_type value="break"/>
-		<stack_type value="replace"/>
-		<duration value="0"/>
-		<display_value value=".LegHurtDuration"/>
-		<display_value_format value="time"/>
-
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegSplinted"/>
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegCast"/>
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegSprained"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LegHurtCounter" operation="set" value="3605"/>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".LegHurtCounter" operation="set" value="3605"/>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtCounter" operation="add" value="-1"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LegHurtDuration" operation="set" value="@.LegHurtCounter"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtDuration" operation="set" value="@.LegHurtCounter"/>
-		</effect_group>
-
-		<effect_group>
-			<requirement name="CVarCompare" cvar=".LegHurtCounter" operation="LTE" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtCounter" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtDuration" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLegBroken"/>
-		</effect_group>
-
-		<effect_group>
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="1" tags="attFortitude,attAgility"/>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-
-			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.6"/>
-			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.6"/>
-			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.6"/>
-			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.7"/>
-		</effect_group>
-	</buff>	
-
-	<buff name="buffLegSplinted" name_key="buffLegSplintedName" description_key="buffLegSplintedDesc" tooltip_key="buffLegSplintedTooltip" icon="ui_game_symbol_splint">
-		<damage_type value="sprain"/>
-		<duration value="0"/>
-		<display_value value=".LegHurtDuration"/>
-		<display_value_format value="time"/>
-
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegBroken"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtCounter" operation="add" value="-2"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LegHurtDuration" operation="set" value="@.LegHurtCounter"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LegHurtDuration" operation="divide" value="2"/>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtDuration" operation="set" value="@.LegHurtCounter"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtDuration" operation="divide" value="2"/>
-		</effect_group>
-
-		<effect_group>
-			<requirement name="CVarCompare" cvar=".LegHurtCounter" operation="LTE" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtCounter" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtDuration" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLegSplinted"/>
-		</effect_group>
-
-		<effect_group>
-			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.35"/>
-			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.35"/>
-			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.35"/>
-			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.40"/>
-		</effect_group>
-	</buff>
 	
-	<buff name="buffArmSplinted" name_key="buffArmSplintedName" description_key="buffArmSplintedDesc" icon="ui_game_symbol_medical">
-		<stack_type value="replace"/>
-		<duration value="1800"/>
-		<effect_group>
-			<passive_effect name="AttacksPerMinute" operation="perc_subtract" value="0.4,0" duration="0,1800"/>
-			<passive_effect name="RoundsPerMinute" operation="perc_subtract" value="0.4,0" duration="0,1800"/>
-			<passive_effect name="StaminaLoss" operation="perc_add" value="0.4,0" duration="0,1800" tags="melee,ranged"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffArmBroken"/>
-		</effect_group>
-	</buff>
-
 	<buff name="buffIllPneumonia01" name_key="Pneumonia" description_key="buffIllPneumonia01Desc" tooltip_key="buffIllPneumonia01Desc" icon="ui_game_symbol_infection" icon_color="72,0,254" icon_blink="true">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
@@ -431,7 +346,7 @@
 	<buff name="IronPrefab" hidden="true">
 		<effect_group>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/pickaxe_ironPrefab.prefab" local_offset=".1,.01,0" local_rotation="0,50,-75" parent_transform="RightHand"/>							
-				<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/pickaxe_ironPrefab.prefab" local_offset="-.1,-.02,0" local_rotation="0,-90,-75" parent_transform="LeftHand"/>									
+				<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/pickaxe_ironPrefab.prefab" local_offset="-.1,-.02,0" local_rotation="0,-90,-75" parent_transform="LeftHand"/>													
 		</effect_group>
 	</buff>	
 	
@@ -456,14 +371,14 @@
 			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_fire_small" />			
 		</effect_group>
 	</buff>
-	
+<!--	
 	<buff name="FireParticle" hidden="true">
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset=".0,0,0" local_rotation="0,0,0" parent_transform="Spine"/>			
 			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire" />			
 		</effect_group>
 	</buff>
-	
+-->	
 	<buff name="PhoenixParticle" hidden="true">
 		<effect_group>				
 			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,.3,-.5" local_rotation="0,0,-90" parent_transform="Head"/>

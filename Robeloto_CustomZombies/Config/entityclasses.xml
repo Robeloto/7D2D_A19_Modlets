@@ -413,6 +413,7 @@
 	<property name="LootDropProb" value=".15"/>	
 	<effect_group name="Base Effects">	
 		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IronPrefab"/>	
+		<triggered_effect trigger="onSelfDied" action="RemoveBuff" target="self" buff="IronPrefab"/>			
 		<passive_effect name="HealthMax" operation="base_set" value="170"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="70"/>		
