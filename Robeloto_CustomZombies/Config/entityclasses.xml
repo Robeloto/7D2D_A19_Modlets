@@ -1200,12 +1200,12 @@
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="1"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 	</effect_group>
-</entity_class> -->
+</entity_class> 
 
 <entity_class name="animalSkullBird" extends="animalZombieVultureRadiated">
 	<property name="Tags" value="entity,animal,zombie,hostile,radiated"/>
 	<property name="Radiated" value=""/>
-	<property name="SizeScale" value="0.67"/>	
+	<property name="SizeScale" value="0.65"/>	
 	<property name="SightRange" value="180"/>		
     <property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>
 	<property name="SoundRandom" value=""/>
@@ -1216,7 +1216,7 @@
 	<property name="SoundSense" value=""/>
 	<property name="SoundGiveUp" value=""/>	
 	
-	<property name="ReplaceMaterial0" value="particleeffects/materials/waterfallslope"/> 
+
 
 
 	<property name="MoveSpeed" value=".8"/>
@@ -1224,7 +1224,7 @@
 	<property name="MaxTurnSpeed" value="150"/>
 	<property name="HandItem" value="meleeHandAnimalSkullBird"/>
 	
-	<property name="ExperienceGain" value="3100"/> <!-- XP grunt radiated -->
+	<property name="ExperienceGain" value="3100"/> 
 	<property name="DeadBodyHitPoints" value="350"/>
 	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 	<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="0"/>
@@ -1233,13 +1233,13 @@
 	<effect_group name="Base Effects">
 	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SkullPrefab"/>	
 		<passive_effect name="HealthMax" operation="base_set" value="400"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-		<passive_effect name="EntityDamage" operation="perc_add" value=".4"/> <!-- Feral damage -->
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+		<passive_effect name="EntityDamage" operation="perc_add" value=".4"/> 
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 	</effect_group>
 </entity_class>
-
+-->
 <entity_class name="animalWaterRaion" extends="animalMountainLion">
 	<property name="Tags" value="entity,animal,hostile"/>
 	<property name="SizeScale" value="1.1"/>	

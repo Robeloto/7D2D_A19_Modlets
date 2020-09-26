@@ -693,12 +693,13 @@
 	</effect_group>
 </item>
 
+<!--
 <item name="meleeHandAnimalSkullBird">
 	<property name="Extends" value="meleeHandMaster"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="HoldType" value="35"/>
 	<property class="Action0">
-		<property name="Delay" value="0.7"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Delay" value="0.7"/> 
 		<property name="DamageEntity" value="30"/>
 		<property name="DamageBlock" value="600"/>
 		<property name="Buff" value="buffAnesthesia,buffInjuryBleeding,buffInfectionCatch"/>
@@ -713,7 +714,6 @@
 	</property>
 		<effect_group name="meleeHandAnimalSkullBird" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>  A16 .7,  50=1.2 -->
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
 		<passive_effect name="MaxRange" operation="base_set" value="50"/>
 		<passive_effect name="MagazineSize" operation="base_set" value="10"/>
@@ -760,6 +760,7 @@
 		<passive_effect name="BuffProcChance" operation="base_set" value="0.20" tags="buffInfectionCatch"/>			
 	</effect_group>
 </item>
+-->
 
 <!---->
 

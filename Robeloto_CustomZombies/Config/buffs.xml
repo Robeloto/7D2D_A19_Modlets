@@ -349,13 +349,13 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/pickaxe_ironPrefab.prefab" local_offset="-.1,-.02,0" local_rotation="0,-90,-75" parent_transform="LeftHand"/>													
 		</effect_group>
 	</buff>	
-	
+	<!--
 	<buff name="SkullPrefab" hidden="true">
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Entities/OutdoorDecor/cowSkullPrefab" local_offset="0,1.2,.3" local_rotation="35,360,0" parent_transform="Head"/>																					
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Entities/OutdoorDecor/cowSkullPrefab" local_offset="0,-.9,-.2" local_rotation="35,360,0" parent_transform="Head"/>																					
 		</effect_group>
 	</buff>
-	
+	-->
 	<!-- Particles -->
 	
 	<buff name="BloodParticle" hidden="true">
@@ -371,20 +371,6 @@
 			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_fire_small" />			
 		</effect_group>
 	</buff>
-<!--	
-	<buff name="FireParticle" hidden="true">
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset=".0,0,0" local_rotation="0,0,0" parent_transform="Spine"/>			
-			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire" />			
-		</effect_group>
-	</buff>
--->	
-	<buff name="PhoenixParticle" hidden="true">
-		<effect_group>				
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,.3,-.5" local_rotation="0,0,-90" parent_transform="Head"/>
-			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" />		
-		</effect_group>
-	</buff>	
 			
 	<buff name="SparkParticle" hidden="true">
 		<effect_group>
