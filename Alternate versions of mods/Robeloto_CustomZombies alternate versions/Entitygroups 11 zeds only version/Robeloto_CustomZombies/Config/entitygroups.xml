@@ -534,7 +534,6 @@
 <entity name="animalCloaker" prob="0.08" />
 <entity name="animalCopterCorpse" prob="0.07" />
 <entity name="animalFly" prob="0.11"/>
-<entity name="animalSkullBird" prob="0.06" />
 <entity name="zombieBurningMan" prob="0.18"/>
 <entity name="zombieCandyGirl" prob="0.13"/>
 <entity name="zombieMoePuker" prob="0.18"/>
