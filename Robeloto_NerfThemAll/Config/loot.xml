@@ -3,8 +3,9 @@
 <set xpath="/lootcontainers/lootcontainer[@id='100']/@count">1,3</set><!-- original: 2,3 -->
 <set xpath="/lootcontainers/lootcontainer[@id='101']/@count">2,3</set><!-- original: 3,4 -->
 <set xpath="/lootcontainers/lootcontainer[@id='121']/@count">2,6</set><!-- original: 6,8 -->
-<!-- make an auger yourself -->
+<!-- make an auger/ImpactDriver yourself -->
 <remove xpath="/lootcontainers/lootgroup[@name='groupToolsT3']/item[@name='meleeToolPickT3Auger']" />
+<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT3']/item[@name='meleeToolSalvageT3ImpactDriver']" />
 <!-- make an pickaxe yourself or do quest-->
 <remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolPickT2SteelPickaxe']" />
 <remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolPickT1IronPickaxe']" />
