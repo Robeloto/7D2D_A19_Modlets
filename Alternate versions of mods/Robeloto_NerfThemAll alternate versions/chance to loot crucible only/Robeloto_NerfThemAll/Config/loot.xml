@@ -39,6 +39,13 @@
 </append>
 <!-- removing wrench from quest -->
 <remove xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT1']/item[@name='meleeToolSalvageT1Wrench']" />
+<!-- Remove wrench and Ratchet schematics from schematic tools -->
+<remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT0']/item[@name='meleeToolSalvageT1WrenchSchematic']" />
+<remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT1']/item[@name='meleeToolSalvageT2RatchetSchematic']" />
+<!-- make a wrench and ratchet yourself -->
+<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1Wrench']/item[@name='meleeToolSalvageT1Wrench']" />
+<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolSalvageT1Wrench']" />
+<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolSalvageT2Ratchet']" />
 <!-- treasure maps should be rare, right? -->
 <set xpath="/lootcontainers/lootgroup[@name='junk']/item[@group='groupTreasureMaps']/@prob">0.02</set> <!-- original: 0.092 -->
 <set xpath="/lootcontainers/lootcontainer[@id='70']/item[@group='groupTreasureMaps']/@prob">0.04</set> <!-- original: 0.6 -->
@@ -58,11 +65,6 @@
 <item name="chemistryStationSchematic" prob="0.01"><!-- no prob in original -->
 </item>
 </append>
-<!-- Remove wrench schematics from schematic tools -->
-<remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT0']/item[@name='meleeToolSalvageT1WrenchSchematic']" />
-<!-- make a wrench yourself -->
-<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1Wrench']/item[@name='meleeToolSalvageT1Wrench']" />
-<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolSalvageT1Wrench']" />
 <!-- Nerf the treasure chest loot, original 3000, 8000 -->
 <set xpath="/lootcontainers/lootgroup[@name='groupBuriedLootStashTreasure']/item[@name='casinoCoin']/@count">1200,4000</set> <!-- original: 3000, 8000 -->
 <!-- nerf nailgun loot chance -->
