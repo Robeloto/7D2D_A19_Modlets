@@ -2,6 +2,27 @@
 	
 <append xpath="/buffs"> 
 
+<!-- Archon is a Snufkins server side zombie, all credit go to Snufkin -->
+	<buff name="Arch0nScream" hidden="true">
+	 <update_rate value="20"/>
+	<effect_group>
+		<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="horde_spawn"/>
+		<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="positionAOE" range="11" buff="buffArch0n">
+		<requirement name="EntityTagCompare" tags="zombie"/>
+		</triggered_effect>
+	</effect_group>
+	</buff>
+<!-- Archon is a Snufkins server side zombie, all credit go to Snufkin -->		
+	<buff name="buffArch0n" hidden="true">
+	<stack_type value="replace"/>
+	<duration value="10"/>
+	<effect_group>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="50">
+		<requirement name="EntityTagCompare" target="self" tags="zombie"/>
+		</passive_effect>
+	</effect_group>
+	</buff>
+	
 	<buff name="buffCandy" name_key="Candy" description_key="buffCandyDesc" tooltip_key="buffCandyDesc" icon="ui_game_symbol_run" icon_color="255,255,255">
 		<damage_type value="disease"/>
 		<stack_type value="replace"/><duration value="4"/>
@@ -37,6 +58,25 @@
 		</effect_group>
 	</buff>
 	
+	<buff name="buffExploderTimerStart" name_key="" tooltip_key="" icon="ui_game_symbol_skull" icon_color="255,255,255" icon_blink="true">
+		<stack_type value="ignore"/>
+		<duration value="20"/>
+		<update_rate value="0.38"/>
+		<effect_group>	
+		<triggered_effect trigger="onSelfBuffUpdate"  target="self" action="ModifyStats" stat="Health" operation="subtract" value="4" duration="20"/>	
+		</effect_group>
+	</buff>	
+	
+		<buff name="buffExploderHealthLoss" name_key="" tooltip_key="" icon="ui_game_symbol_skull" icon_color="255,255,255" icon_blink="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<update_rate value="99999"/>
+		<effect_group>	
+		<triggered_effect trigger="onSelfBuffStart"  target="self" action="ModifyStats" stat="Health" operation="subtract" value="174" duration="1"/>	
+		</effect_group>
+	</buff>	
+		
+			
 	<buff name="buffNoiseAOE01" hidden="true">
 		<duration value=".3"/>
 		<effect_group>
@@ -89,7 +129,7 @@
 			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="horde_spawn_warning" play_in_head="true"/>
 		</effect_group>			
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="2" effect_name="Radiation"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0" effect_name="Radiation"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Radiation"/>		
 			
 			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.3,.1" duration="0,30"/>
@@ -322,6 +362,17 @@
 	
 	<!-- Prefabs -->
 	
+	<!-- Snufkins Archon zombie, all credits go to Snufkin -->
+	<buff name="Arch0nPrefab" hidden="true">
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Animals/vulture/vulture" local_offset="0,-.3,.25" local_rotation="-45,0,0" parent_transform="Spine3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Spine" transform_path="body_mesh"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset=".2,0,0" local_rotation="0,0,0" parent_transform="RightHand"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="-.2,0,0" local_rotation="0,0,0" parent_transform="LeftHand"/>
+			</effect_group>
+	</buff>	
+	
+			
 	<buff name="CopterPrefab" hidden="true">		
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Vehicles/Gyrocopter/gyrocopter_start"/>	
@@ -337,6 +388,15 @@
 		</effect_group>
 	</buff>
 	
+	<buff name="ExploderPrefab" hidden="true">
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Dynamite/dynamitePrefab.prefab" local_offset=".16,.06,-.035" local_rotation="80,60,200" parent_transform="RightHand"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Dynamite/dynamitePrefab.prefab" local_offset="-.16,-.06,.05" local_rotation="35,-50,-80" parent_transform="LeftHand"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/TimedCharge/timedChargePrefab.prefab" local_offset="-.05,.07,-.15" local_rotation="-90,0,0" parent_transform="RightShoulder"/>
+			<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="RightShoulder" transform_path="body_mesh"/>			
+			</effect_group>
+	</buff>
+	
 	<buff name="GunnerPrefab" hidden="true">
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/m60/m60Prefab.prefab" local_offset=".17,.05,-.2" local_rotation="0,180,-101" parent_transform="RightHand"/>
@@ -349,13 +409,20 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/pickaxe_ironPrefab.prefab" local_offset="-.1,-.02,0" local_rotation="0,-90,-75" parent_transform="LeftHand"/>													
 		</effect_group>
 	</buff>	
-	<!--
-	<buff name="SkullPrefab" hidden="true">
+
+	<!-- Snufkins scarecrow zombie, all credits go to Snufkin -->
+	<buff name="scarecrowPrefab" hidden="true">
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="Entities/OutdoorDecor/cowSkullPrefab" local_offset="0,-.9,-.2" local_rotation="35,360,0" parent_transform="Head"/>																					
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Plants/pumpkinJackoLanternPrefab" local_offset="-.5,0,0" local_rotation="0,0,90" parent_transform="Head"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="0,0,0" local_rotation="0,0,0" parent_transform="RightHand"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="0,0,0" local_rotation="0,0,0" parent_transform="LeftHand"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/pickaxe_ironPrefab.prefab" local_offset="-.2,.1,0" local_rotation="0,-90,0" parent_transform="RightHand"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_torch_wall" />
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_torch_wall" />
 		</effect_group>
-	</buff>
-	-->
+</buff>
+	
+
 	<!-- Particles -->
 	
 	<buff name="BloodParticle" hidden="true">
@@ -365,7 +432,7 @@
 		</effect_group>
 	</buff>	
 	
-	<buff name="FireFlyParticle" hidden="true">
+	<buff name="FireParticle" hidden="true">
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_fire_small" local_offset=".0,0,0" local_rotation="0,0,0" parent_transform="Head"/>					
 			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_fire_small" />			

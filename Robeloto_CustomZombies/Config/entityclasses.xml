@@ -15,10 +15,14 @@
 
 <append xpath="/entity_classes">  
 
+<!-- Template Zombie from Snufkins zombies. All credits go to Snufkin -->
+<entity_class name="Zombie_Template" extends="zombieTemplateMale"><property name="EntityType" value="Zombie" /><property name="Mesh" value="#Entities/Zombies?Zombies/zombie01Ragdoll.prefab"/><property name="Prefab" value="NPC" /><property name="Class" value="EntityZombie" /><property name="Parent" value="Enemies" /><property name="IsEnemyEntity" value="true" /><property name="HandItem" value="meleeHandZombie01" /><property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert" /><property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense" /><property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain" /><property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath" /><property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack" /><property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><property name="AttackTimeoutDay" value="1.5" /><property name="AttackTimeoutNight" value="1.1" /><property name="WalkType" value="7" /><property name="ModelType" value="ZombieUMA" /><property name="RootMotion" value="true" /><property name="HasRagdoll" value="true" /><property name="PhysicsBody" value="zombieUMA" /><property name="HasDeathAnim" value="false" /><property name="TimeStayAfterDeath" value="30" />
+</entity_class>
+
 <!-- ZOMBIES-->
-	<entity_class name="zombieAnesthesia" extends="zombieNurseFeral">
+<entity_class name="zombieAnesthesia" extends="zombieNurseFeral">
 	<property name="Tags" value="entity,zombie,walker,feral"/>
-<property name="ReplaceMaterial0" value="entities/animals/vulture/materials/vulture_v2"/>
+	<property name="ReplaceMaterial0" value="entities/animals/vulture/materials/vulture_v2"/>
 	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/feral_eye.mat"/>
 	<property name="WalkType" value="7"/>	
 	<property name="Mass" value="90"/>	
@@ -31,7 +35,7 @@
 	<property name="AITask-6" value="Wander"/>
 	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->		
 	<property name="PainResistPerHit" value="1"/>
-	<property name="MoveSpeedAggro" value="1.2, 1.9"/> <!-- chasing a target min/max (like day or night)-->
+	<property name="MoveSpeedAggro" value="1.2, 1.9"/> 
 	<property name="JumpMaxDistance" value="10, 15"/>		
 	<property name="HandItem" value="meleeHandZombieAnesthesia"/>
 	<property name="ExperienceGain" value="3400"/> <!-- XP strong -->	
@@ -39,8 +43,58 @@
 	<property name="LootDropProb" value=".17"/>	
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="600"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-		<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+		<passive_effect name="EntityDamage" operation="perc_add" value="0"/> 
+	</effect_group>
+</entity_class>
+
+<!-- This zombieArchon is from Snufkins server side zombies, all credit go to Snufkin -->
+<entity_class name="zombieArch0n" extends="zombieWightFeral">
+	<property name="Tags" value="entity,zombie,walker,feral,radiated,hostile,vulture,arch0n"/>
+	<property name="Class" value="EntityVulture"/>
+	<property name="HasRagdoll" value="false"/>
+	<property name="ReplaceMaterial0" value="entities/animals/vulture/materials/vulture_v2"/>
+	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/rad_eye.mat"/>
+	<property name="Radiated" value=""/>
+	<property name="Mass" value="50"/>
+	<property name="MoveSpeed" value=".7"/>
+	<property name="MoveSpeedAggro" value="2, 2"/>
+	<property name="MaxTurnSpeed" value="150"/>
+	<property name="HandItem" value="meleeHandZombieArch0n"/>
+	<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,200"/>
+	<property name="AITask-2" value="BreakBlock"/>
+	<property name="AITask-3" value="RunawayWhenHurt" data="runChance=0.5;healthPer=0.3;healthPerMax=0.6"/>
+	<property name="AITask-4" value="ApproachSpot"/>
+	<property name="AITask-5" value="Wander"/>
+	<property name="AITask-6" value=""/>
+	<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+	<property name="AITarget-2" value="BlockingTargetTask"/>
+	<property name="DismemberMultiplierHead" value=".2"/>
+	<property name="DismemberMultiplierArms" value=".2"/>
+	<property name="DismemberMultiplierLegs" value=".2"/>
+	<property name="PainResistPerHit" value="1"/>
+	<property name="LegCrawlerThreshold" value="0"/>
+	<property name="LegCrippleThreshold" value="0"/>
+	<property name="KnockdownProneDamageThreshold" value="0"/>
+	<property name="KnockdownProneStunDuration" value="0"/>
+	<property name="KnockdownProneRefillRate" value="0"/>
+	<property name="KnockdownKneelDamageThreshold" value="0"/>
+	<property name="KnockdownKneelStunDuration" value="0"/>
+	<property name="KnockdownKneelRefillRate" value="0"/>
+	<property name="LegsExplosionDamageMultiplier" value=".85"/>
+	<property name="ArmsExplosionDamageMultiplier" value=".85"/>
+	<property name="HeadExplosionDamageMultiplier" value=".85"/>
+	<property name="ChestExplosionDamageMultiplier" value=".85"/>
+	<property name="ExperienceGain" value="5000"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="LootDropProb" value="1"/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="1700"/>
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Arch0nPrefab"/>
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="Arch0nScream"/>
+		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 	</effect_group>
 </entity_class>
 
@@ -73,9 +127,8 @@
 	<property name="SoundDeath" value="Player_Female/player2death"/>
 	<property name="SoundAttack" value="zombiefemaleattack"/>
 	<property name="SoundFootstepModifier" value="stepwater"/>			
-
 	<!-- Gameplay -->
-	<property name="HandItem" value="meleehandZombieAqua" />	
+	<property name="HandItem" value="meleeHandZombieAqua" />	
 	<property name="JumpMaxDistance" value="1.4, 8"/>
 	<property name="ExperienceGain" value="2400"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -108,14 +161,11 @@
 	<property name="SoundDeath" value="Enemies/Burnt_Zombie/zombieburntdeath"/>
 	<property name="SoundSense" value="Enemies/Burnt_Zombie/zombieburntsense"/>
 	<property name="SoundFootstepModifier" value="Enemies/Burnt_Zombie/zombieburntfootstep"/>
-
 	<property name="PainResistPerHit" value="1"/>
-
 	<!-- Gameplay -->
-	<property name="HandItem" value="meleehandZombieBurningMan"/>
+	<property name="HandItem" value="meleeHandZombieBurningMan"/>
 	<property name="HandItemCrawler" value="meleeHandZombieBurningCrawler"/> <!-- override the default replacement of meleeHandZombie02 with a specific hand item -->	
 	<effect_group name="Base Effects">	
-<!-- <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="FireParticle"/> --> <!-- Particle is trying to spawn on a mesh with zero surface area-->	
 		<passive_effect name="HealthMax" operation="base_set" value="260"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 	</effect_group>
@@ -143,19 +193,16 @@
 	<property name="SoundDeath" value="Enemies/Burnt_Zombie/zombieburntdeath"/>
 	<property name="SoundSense" value="Enemies/Burnt_Zombie/zombieburntsense"/>
 	<property name="SoundFootstepModifier" value="Enemies/Burnt_Zombie/zombieburntfootstep"/>
-
 	<property name="PainResistPerHit" value="1"/>
-
 	<!-- Gameplay -->
-	<property name="HandItem" value="meleehandZombieBlazingMan"/>
+	<property name="HandItem" value="meleeHandZombieBlazingMan"/>
 	<property name="HandItemCrawler" value="meleeHandZombieBurningCrawler"/> <!-- override the default replacement of meleeHandZombie02 with a specific hand item -->	
 	<property name="ExperienceGain" value="3700"/> 	
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>	
 	<property name="LootDropProb" value=".19"/>		
 	<effect_group name="Base Effects">	
-		<!-- <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="FireParticle"/> --> <!-- Particle is trying to spawn on a mesh with zero surface area-->
-		<passive_effect name="HealthMax" operation="base_set" value="555"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="HealthMax" operation="base_set" value="500"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	</effect_group>
 </entity_class>	
 
@@ -174,22 +221,18 @@
 	<property name="SoundFootstepModifier" value=""/>
 	<property name="WalkType" value="2"/>	
 	<property name="Mass" value="50"/>
-
 	<property name="DismemberMultiplierHead" value=".33"/>
 	<property name="DismemberMultiplierArms" value=".33"/>
 	<property name="DismemberMultiplierLegs" value=".33"/>
 	<property name="PainResistPerHit" value=".65"/>
-
 	<!-- Gameplay -->
 	<property name="MoveSpeed" value="0.9"/>
 	<property name="MoveSpeedAggro" value="1.1, 1.5"/>	
 	<property name="HandItem" value="meleeHandZombieCandy"/>
 	<property name="JumpMaxDistance" value="9, 16"/>
-
 	<property name="ExperienceGain" value="1600"/> 
 	<property name="LootDropProb" value=".15"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
-
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="400"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 	
@@ -198,10 +241,10 @@
 
 	<entity_class name="zombieChroma" extends="zombieSpider">
 	<property name="Tags" value="entity,zombie,walker"/>
-	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardSteveHDRagdoll.prefab"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardSuitRagdoll.prefab"/>
 	<property name="ReplaceMaterial0" value="entities/resources/materials/oreshaleboulder"/>		
-	<property name="ReplaceMaterial1" value="materials/nightvisionmaterial"/>
-	<property name="ReplaceMaterial2" value="entities/resources/materials/oreleadboulder"/>	
+	<property name="ReplaceMaterial2" value="materials/nightvisionmaterial"/>
+	<property name="ReplaceMaterial1" value="entities/resources/materials/oreleadboulder"/>	
 	<property name="Mass" value="180"/>	
 	<property name="SizeScale" value="1.1"/>	
 	<property name="PainResistPerHit" value="1"/>
@@ -227,6 +270,57 @@
 	</effect_group>
 </entity_class>
 
+<entity_class name="zombieExploder" extends="zombieTemplateMale">  
+	<property name="Tags" value="entity,zombie,walker"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardSuitRagdoll.prefab"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="ReplaceMaterial0" value="entities/buildings/materials/chimney"/>
+	<property name="ReplaceMaterial2" value="#Entities/Zombies?Zombies/Materials/rad_eye.mat"/>	
+	<property name="ModelType" value="Standard"/>		
+	<property name="WalkType" value="2"/>
+	<property name="SizeScale" value="1"/>	
+	<property name="Class" value="EntityZombieCop"/>	
+	<property name="RightHandJointName" value="Jaw"/>	
+	<property name="Mass" value="210"/>
+	<property name="Weight" value="100"/>
+	<property name="PushFactor" value="20"/>	
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="TintMaterial2" value="41,38,34"/>
+	<property name="SoundRandom" value="zombieExploder"/>
+	<property name="SoundAlert" value="zombieExploder"/>
+	<property name="SoundSense" value="zombieExploder"/>
+	<property name="SoundHurt" value="zombieExploder"/>
+	<property name="SoundDeath" value="zombieExploder"/>
+	<property name="SoundAttack" value="zombieExploder"/>
+	<!-- Gameplay -->
+	<property name="HandItem" value="meleeHandZombieExploder" />
+	<property name="Explosion.ParticleIndex" value="13"/>
+	<property name="Explosion.RadiusBlocks" value="6"/>
+	<property name="Explosion.RadiusEntities" value="7"/>
+	<property name="Explosion.BlockDamage" value="1500"/>
+	<property name="Explosion.EntityDamage" value="730"/>
+	<property name="Explosion.DamageBonus.earth" value="25"/>	
+	<property name="SoundExplodeWarn" value="demolitionzexplodewarning"/>
+	<property name="SoundTick" value="demolitionz_beep,.3,.7"/>		
+	<property name="JumpMaxDistance" value="2, 4"/>
+    <property name="MoveSpeedAggro" value="1.25, 1.7"/>		
+	<property name="ExperienceGain" value="3005"/> <!-- XP strong -->
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="325"/>		
+		<passive_effect name="WalkSpeed" operation="base_set" value="3"/> <!-- Very fast! Change if you like -->
+		<passive_effect name="RunSpeed" operation="base_set" value="3"/> <!-- Very fast! Change if you like -->
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="85"/>				
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->		
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ExploderPrefab"/>	
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffExploderHealthLoss"/>			
+		<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" target="self" buff="buffExploderTimerStart"/>		
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffExploderTimerStart"/>	
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffExploderTimerStart"/>	
+	</effect_group>
+</entity_class>	
+
     <entity_class name="zombieFireBoss" extends="zombieTemplateMale"> 
 	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardCopRagdoll.prefab"/>
 	<property name="ReplaceMaterial0" value="particleeffects/materials/blood_mist_tile_02"/>		
@@ -250,18 +344,15 @@
 	<property name="SoundDeath" value="Enemies/Burnt_Zombie/zombieburntdeath"/>
 	<property name="SoundSense" value="Enemies/Burnt_Zombie/zombieburntsense"/>
 	<property name="SoundFootstepModifier" value="bear_footstep"/>
-
 	<property name="PainResistPerHit" value="1"/>
-
 	<!-- Gameplay -->
-	<property name="HandItem" value="meleehandZombieBurningBoss"/>
+	<property name="HandItem" value="meleeHandZombieBurningBoss"/>
 	<property name="ExperienceGain" value="7500"/> <!-- XP strong -->	
 	<property name="LootDropProb" value=".8"/>	
-	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>	
 	<effect_group name="Base Effects">	
 		<passive_effect name="HealthMax" operation="base_set" value="1024"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
-	<!-- <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="FireParticle"/> --> <!-- Particle is trying to spawn on a mesh with zero surface area-->	
 		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>			
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>		
 		<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/> <!-- Boss regen, 1% -->	
@@ -284,10 +375,8 @@
 	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->	
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>	
 	<property name="LootDropProb" value=".18"/>	
-
 	<property name="PainResistPerHit" value="1"/>
-
-	<property name="HandItem" value="meleehandZombieElf"/>
+	<property name="HandItem" value="meleeHandZombieElf"/>
 	<property name="ExperienceGain" value="3000"/> <!-- XP strong -->	
 	<effect_group name="Base Effects">	
 		<passive_effect name="HealthMax" operation="base_set" value="700"/>
@@ -295,7 +384,7 @@
 	</effect_group>
 </entity_class>
 
-	<entity_class name="zombieFreezer" extends="zombieTemplateMale">
+<entity_class name="zombieFreezer" extends="zombieTemplateMale">
 	<property name="Tags" value="entity,zombie,walker"/>	
 	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardSnowRagdoll.prefab"/>	
 	<property name="ReplaceMaterial0" value="entities/buildings/materials/glass_industrial_lod"/>
@@ -315,20 +404,52 @@
 	<property name="HandItem" value="meleeHandZombieFreezer"/>
 	<property name="ExperienceGain" value="3100"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
-	<property name="LootDropProb" value=".16"/>	
+	<property name="LootDropProb" value=".16"/>
 	<effect_group name="Base Effects">	
 		<passive_effect name="HealthMax" operation="base_set" value="450"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 	</effect_group>
 </entity_class>
 
+<entity_class name="zombieGe1st" extends="Zombie_Template">
+	<property name="Archetype" value="Ge1st" />
+	<property name="Class" value="EntityVulture"/>
+	<property name="HasRagdoll" value="false"/>
+	<property name="Tags" value="entity,animal,zombie,boss,hostile,radiated,vulture,umazombie,ge1st"/>
+	<property name="Radiated" value=""/>
+	<property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
+	<property name="SoundAlert" value="Animals/Vulture/vulturealert"/>
+	<property name="SoundHurt" value="Animals/Vulture/vulturepain"/>
+	<property name="SoundDeath" value="Animals/Vulture/vulturedeath"/>
+	<property name="SoundAttack" value="Animals/Vulture/vultureattack"/>
+	<property name="SoundSense" value="Animals/Vulture/vulturesense"/>
+	<property name="SoundGiveUp" value="Animals/Vulture/vulturegiveup"/>
+	<property name="Mass" value="50"/>
+	<property name="PhysicsBody" value="nolegsUMA" />
+	<property name="MoveSpeed" value=".7"/>
+	<property name="MoveSpeedAggro" value="2, 2"/>
+	<property name="MaxTurnSpeed" value="150"/>
+	<property name="ExperienceGain" value="2000"/>
+	<property name="HandItem" value="meleeHandZombieGeist"/>
+	<property name="AITask-1" value=""/>
+	<property name="AITarget-1" value=""/>
+	<property name="SightRange" value="300"/>
+	
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+		<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffShocked2"/>
+		<passive_effect name="HealthMax" operation="base_set" value="1100"/>
+	</effect_group>
+</entity_class>
+
 <entity_class name="zombieGiant" extends="zombieTemplateMale">
 	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardBikerHDRagdoll.prefab"/>
-		<property name="WalkType" value="7"/>	
+	<property name="WalkType" value="7"/>	
 	<property name="JumpMaxDistance" value="10, 20"/>			
 	<!-- Gameplay -->
 	<property name="HandItem" value="meleeHandZombieGiant"/>
-<property name="ReplaceMaterial0" value="entities/gore/materials/torso_gore"/>
 	<property name="MoveSpeedAggro" value=".4, 1.4"/>	
 	<property name="SightRange" value="160"/>	
 	<property name="SizeScale" value="2.15"/>	
@@ -345,6 +466,7 @@
 	<property name="ExperienceGain" value="19000"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
 	<property name="LootDropProb" value=".9"/>
+	
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="1700"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
@@ -377,13 +499,12 @@
 	<property name="SoundDeath" value="gunnerpain"/>
 	<property name="SoundAttack" value="gunnerattack"/>	
 	<property name="SoundFootstepModifier" value="bear_footstep"/>	
-
 	<property name="PainResistPerHit" value="1"/>
-
-	<property name="HandItem" value="meleehandZombieGunner"/>
+	<property name="HandItem" value="meleeHandZombieGunner"/>
 	<property name="ExperienceGain" value="5000"/> <!-- XP strong -->	
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value=".7"/> 	
+	<property name="LootDropProb" value=".7"/> 
+	
 	<effect_group name="Base Effects">	
 		<passive_effect name="HealthMax" operation="base_set" value="800"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
@@ -411,6 +532,7 @@
 	<property name="ExperienceGain" value="3300"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 	<property name="LootDropProb" value=".15"/>	
+	
 	<effect_group name="Base Effects">	
 		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IronPrefab"/>	
 		<triggered_effect trigger="onSelfDied" action="RemoveBuff" target="self" buff="IronPrefab"/>			
@@ -449,9 +571,8 @@
 	<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
 	<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
 	<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
-
 	<!-- Gameplay -->
-	<property name="HandItem" value="meleehandZombieMoePuker" />
+	<property name="HandItem" value="meleeHandZombieMoePuker" />
 	<property name="Explosion.ParticleIndex" value="13"/>
 	<property name="Explosion.RadiusBlocks" value="4"/>
 	<property name="Explosion.RadiusEntities" value="4"/>
@@ -460,7 +581,6 @@
 	<property name="Explosion.DamageBonus.earth" value="555"/>	
 	<property name="JumpMaxDistance" value="1.4, 1.8"/>
 	<property name="ExperienceGain" value="1005"/> <!-- XP strong -->
-
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="400"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
@@ -471,7 +591,6 @@
 	<property name="Tags" value="entity,zombie,walker,feral"/>
 	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_dirt"/>		
 	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/feral_eye.mat"/>
-
 	<!-- Gameplay -->
 	<property name="Explosion.ParticleIndex" value="3"/>
 	<property name="Explosion.RadiusBlocks" value="6"/>
@@ -481,9 +600,7 @@
 	<property name="Explosion.DamageBonus.earth" value="600"/>	
 	<property name="JumpMaxDistance" value="4, 8"/>
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
-
 	<property name="HandItem" value="meleeHandZombieFeralMoePuker"/> 
-
 	<property name="ExperienceGain" value="1700"/> <!-- XP strong feral -->
 	<property name="LootDropProb" value=".09"/> <!-- Feral -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -516,13 +633,10 @@
 	<property name="WalkType" value="2"/>
 	<property name="StompsSpikes" value="true"/>		
 	<property name="Mass" value="700"/>
-
-	<!-- Gameplay -->
 	<property name="MoveSpeed" value="0.04"/>
 	<property name="MoveSpeedAggro" value="0.4, 0.8"/>	
 	<property name="HandItem" value="meleeHandZombieMummy"/>
 	<property name="JumpMaxDistance" value="9, 16"/>
-
 	<property name="ExperienceGain" value="2400"/> 
 	<property name="LootDropProb" value=".16"/>		
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
@@ -540,7 +654,6 @@
 	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/>
 	<property name="WalkType" value="8"/>	
 	<property name="RightHandJointName" value="RightHand"/>			
-	<!-- Gameplay -->
 	<property name="HandItem" value="meleeHandZombiePredator"/>
 <property name="ReplaceMaterial0" value="materials/goggleeyedmaterial"/>
 <property name="ReplaceMaterial1" value="materials/occludeeshadowcaster"/>
@@ -573,6 +686,7 @@
 	<property name="ExperienceGain" value="10000"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
 	<property name="LootDropProb" value=".7"/>
+	
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="666"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
@@ -614,13 +728,41 @@
 	<property name="CanClimbVertical" value="true"/>
 	<property name="JumpMaxDistance" value="12, 20"/>	
 	<property name="HandItem" value="meleeHandZombieSanguis"/>
-	<property name="ExperienceGain" value="3500"/> <!-- XP strong -->
+	<property name="ExperienceGain" value="3500"/> 
 	<property name="LootDropProb" value=".19"/>	
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>	
 	<effect_group name="Base Effects">	
 		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="BloodParticle"/>		
 		<passive_effect name="HealthMax" operation="base_set" value="500"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+	</effect_group>
+</entity_class>
+
+<!-- Snufkins scarecrow zombie, all credits go to Snufkin -->
+<entity_class name="zombieSc4recrow" extends="Zombie_Template">
+	<property name="Archetype" value="Sc4recrow" />
+	<property name="Tags" value="entity,zombie,walker,boss,umazombie,sc4recrow" />
+	<property name="WalkType" value="7"/>
+	<property name="PhysicsBody" value="nolegsUMA" />
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="LootDropProb" value="0.2"/>
+	<property name="SoundRandom" value="Enemies/Burnt_Zombie/zombieburntroam"/>
+	<property name="SoundSpawn" value="Ambient_Loops/a_fire_embersmoke_sm_lp"/>
+	<property name="SoundAlert" value="Enemies/Burnt_Zombie/zombieburntalert"/>
+	<property name="SoundAttack" value="Enemies/Burnt_Zombie/zombieburntattack"/>
+	<property name="SoundHurt" value="Enemies/Burnt_Zombie/zombieburntpain"/>
+	<property name="SoundDeath" value="Enemies/Burnt_Zombie/zombieburntdeath"/>
+	<property name="SoundSense" value="Enemies/Burnt_Zombie/zombieburntsense"/>
+	<property name="HandItem" value="meleeHandZombieScarecrow"/>
+	<property name="ExperienceGain" value="1500"/>
+	<property name="SoundFootstepModifier" value=""/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="500"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="scarecrowPrefab"/>
+		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 	</effect_group>
 </entity_class>	
 
@@ -649,8 +791,6 @@
 	<property name="RootMotion" value="true"/>
 	<property name="HasDeathAnim" value="true"/>
 	<property name="AIPathCostScale" value=".5, .6"/>
-
-	<!-- Gameplay -->
 	<property name="HandItem" value="meleeHandZombieScreamerBoss"/>
 	<property name="JumpMaxDistance" value="8, 16"/>	
 	<property name="ExperienceGain" value="10000"/> <!-- XP grunt feral -->	
@@ -658,7 +798,7 @@
 	<property name="LootDropProb" value=".8"/> 	
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="1200"/>
+		<passive_effect name="HealthMax" operation="base_set" value="1300"/>
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="20"/>			
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 		<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/> <!-- Boss regen, 1% -->
@@ -714,8 +854,8 @@
 	<property name="PainResistPerHit" value="1"/>
 	<property name="MoveSpeedAggro" value="1, 1.5"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="JumpMaxDistance" value="10, 15"/>			
-		<property name="ExperienceGain" value="5700"/>
-	<property name="HandItem" value="meleehandZombieShockerFeral"/>
+	<property name="ExperienceGain" value="5700"/>
+	<property name="HandItem" value="meleeHandZombieShockerFeral"/>
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 	<property name="LootDropProb" value=".28"/>		
 	<effect_group name="Base Effects">
@@ -739,7 +879,7 @@
 	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->
 	<property name="JumpMaxDistance" value="8, 12"/>		
 		<property name="ExperienceGain" value="3600"/>
-	<property name="HandItem" value="meleehandZombieShocker"/>
+	<property name="HandItem" value="meleeHandZombieShocker"/>
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 	<property name="LootDropProb" value=".2"/>		
 	<effect_group name="Base Effects">			
@@ -875,7 +1015,6 @@
 	<property name="SoundAttack" value="anacondaattack"/>
 	<property name="RootMotion" value="true"/>
 	<property name="HasDeathAnim" value="true"/>
-
 	<property class="MechanimAttackTriggers">
 		<property name="state0" value="AttackTrigger"/>
 	</property>
@@ -885,26 +1024,22 @@
 	<property class="MechanimDeathTriggers">
 		<property name="state0" value="DeathTrigger"/>
 	</property>
-
 	<!-- Gameplay -->
 	<property name="MaxTurnSpeed" value="100"/>
 	<property name="MoveSpeed" value="0.15"/>
 	<property name="MoveSpeedAggro" value=".18, .35"/>
 	<property name="MoveSpeedPanic" value="0.27"/>
 	<property name="SightRange" value="150"/>		
-
 	<property name="HandItem" value="meleeHandAnimalAnaconda"/>
 	<property name="AttackTimeoutDay" value="1.5"/>
 	<property name="AttackTimeoutNight" value="1.1"/>
-
 	<property name="ExperienceGain" value="5900"/>
 	<property name="DeadBodyHitPoints" value="350"/>
 	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="80"/> <!-- animalSnake -->
 	<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="40"/>
-
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="700"/>
+		<passive_effect name="HealthMax" operation="base_set" value="650"/>
 		<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
 	</effect_group>
 </entity_class>
@@ -923,15 +1058,15 @@
 	<property name="MaxTurnSpeed" value="150"/>
 	<property name="HandItem" value="meleeHandAnimalBurningPhoenix"/>	
 	
-	<property name="ExperienceGain" value="5500"/> <!-- XP grunt radiated -->
+	<property name="ExperienceGain" value="5500"/> 
 	<property name="DeadBodyHitPoints" value="350"/>
 	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 	<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="35"/> <!-- animalZombieVulture -->
 	<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="70"/>	
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="600"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="HealthMax" operation="base_set" value="620"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 		<passive_effect name="EntityDamage" operation="perc_add" value=".4"/> <!-- Feral damage -->
 	</effect_group>
 </entity_class>	
@@ -987,7 +1122,7 @@
 	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="450"/>
+		<passive_effect name="HealthMax" operation="base_set" value="370"/>
 		<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
 	</effect_group>
 </entity_class>
@@ -1006,15 +1141,15 @@
 	<property name="MaxTurnSpeed" value="150"/>
 	<property name="HandItem" value="meleeHandAnimalZombieVulture"/>
 	
-	<property name="ExperienceGain" value="3100"/> <!-- XP grunt radiated -->
+	<property name="ExperienceGain" value="3100"/> 
 	<property name="DeadBodyHitPoints" value="350"/>
 	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 	<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="35"/> <!-- animalZombieVulture -->
 	<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="15"/>	
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="210"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="HealthMax" operation="base_set" value="200"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 		<passive_effect name="EntityDamage" operation="perc_add" value=".4"/> <!-- Feral damage -->
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
@@ -1051,8 +1186,8 @@
 
 	<effect_group name="Base Effects">
 	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="CopterPrefab"/>	
-		<passive_effect name="HealthMax" operation="base_set" value="400"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="HealthMax" operation="base_set" value="500"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 		<passive_effect name="EntityDamage" operation="perc_add" value=".4"/> <!-- Feral damage -->
 	</effect_group>
 </entity_class>
@@ -1069,7 +1204,7 @@
 	<property name="MaxTurnSpeed" value="150"/>
 	<property name="HandItem" value="meleeHandAnimalDiamondPhoenix"/>	
 	
-	<property name="ExperienceGain" value="5200"/> <!-- XP grunt radiated -->
+	<property name="ExperienceGain" value="5200"/> 
 	<property name="DeadBodyHitPoints" value="350"/>
 	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 	<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="35"/> <!-- animalZombieVulture -->
@@ -1077,7 +1212,7 @@
 
 	<effect_group name="Base Effects">			
 		<passive_effect name="HealthMax" operation="base_set" value="666"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 		<passive_effect name="EntityDamage" operation="perc_add" value=".4"/> <!-- Feral damage -->
 	</effect_group>
 </entity_class>
@@ -1129,21 +1264,21 @@
 	<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="40"/>
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="555"/>
-		<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+		<passive_effect name="HealthMax" operation="base_set" value="325"/>
+		<passive_effect name="HealthMax" operation="perc_add" value="0"/> 
 	</effect_group>
 </entity_class>
 	
 <entity_class name="animalFly" extends="animalTemplateHostile">
-	<property name="Tags" value="entity,animal,zombie,hostile"/>
-	<property name="Radiated" value=""/>
-	<property name="Class" value="EntityVulture"/>	
+	<property name="Tags" value="entity,animal,zombie,hostile,vulture"/>
+	<property name="Class" value="EntityVulture"/>
 	<property name="EntityType" value="Zombie"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
-	<property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>	
 	<property name="ModelType" value="Standard"/>
 	<property name="HasRagdoll" value="true"/>
-	<property name="PhysicsBody" value="vulture"/>	
+	<property name="PhysicsBody" value="vulture"/>
+	<property name="Mass" value="35"/>
+	<property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>
 	<property name="SizeScale" value="0.06"/>
 	<property name="SightRange" value="180"/>	
 	<property name="ReplaceMaterial0" value="particleeffects/blood"/>	
@@ -1155,91 +1290,27 @@
 	<property name="SoundSense" value="animalflysense"/>
 	<property name="SoundGiveUp" value="animalflygiveup"/>
 
-	<property name="MoveSpeed" value="1.1"/>
-	<property name="MoveSpeedAggro" value="1.4, 1.5"/>
-	<property name="MaxTurnSpeed" value="150"/>
-	<property name="HandItem" value="meleeHandAnimalFly"/>	
-	
-	<property name="ExperienceGain" value="500"/> 
-	<property name="DeadBodyHitPoints" value="80"/>
+	<!-- Stealth -->
+	<property name="SightRange" value="70"/>
 
+	<!-- Gameplay -->
+	<property name="MoveSpeed" value="1.1"/>
+	<property name="MoveSpeedAggro" value="2.1, 2.1"/> <!-- Used when player in vehicle -->
+	<property name="MaxTurnSpeed" value="190"/>
+
+	<property name="HandItem" value="meleeHandAnimalFly"/>
+	<property name="Immunity" value="sickness;disease;wellness"/> <!-- bleeding; -->
+
+	<property name="DismemberMultiplierLegs" value="0"/>
+	<property name="PainResistPerHit" value="-1"/> <!-- no pain -->
+
+	<property name="DeadBodyHitPoints" value="175"/>
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="3"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	</effect_group>
 </entity_class>
 
-<!--
-<entity_class name="animalFireFly" extends="animalZombieVultureRadiated">
-	<property name="Tags" value="entity,animal,zombie,hostile,radiated"/>
-	<property name="Radiated" value=""/>	
-	<property name="SizeScale" value="0.35"/>
-	<property name="SightRange" value="180"/>	
-	<property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>	
-	<property name="SoundRandom" value="animalflyrandom"/>
-	<property name="SoundAlert" value="animalflyalert"/>
-	<property name="SoundHurt" value="animalflypain"/>
-	<property name="SoundDeath" value="animalflypain"/>
-	<property name="SoundAttack" value="animalflyattack"/>
-	<property name="SoundSense" value="animalflysense"/>
-	<property name="SoundGiveUp" value="animalflygiveup"/>
-	
-	<property name="ReplaceMaterial0" value="particleeffects/materials/waterfallslope"/> 
-	<property name="MoveSpeed" value="1.5"/>
-	<property name="MoveSpeedAggro" value="1.6, 1.7"/>
-	<property name="MaxTurnSpeed" value="150"/>
-	<property name="HandItem" value="meleeHandAnimalFireFly"/>		
-	<property name="ExperienceGain" value="2000"/> 
-	<property name="DeadBodyHitPoints" value="80"/>
-
-	<effect_group name="Base Effects">
-	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="FireFlyParticle"/>
-		<passive_effect name="HealthMax" operation="base_set" value="12"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
-		<passive_effect name="EntityDamage" operation="perc_add" value=".1"/> 		
-		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="1"/>
-		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
-	</effect_group>
-</entity_class> 
-
-<entity_class name="animalSkullBird" extends="animalZombieVultureRadiated">
-	<property name="Tags" value="entity,animal,zombie,hostile,radiated"/>
-	<property name="Radiated" value=""/>
-	<property name="SizeScale" value="0.65"/>	
-	<property name="SightRange" value="180"/>		
-    <property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>
-	<property name="SoundRandom" value=""/>
-	<property name="SoundAlert" value=""/>
-	<property name="SoundHurt" value=""/>
-	<property name="SoundDeath" value=""/>
-	<property name="SoundAttack" value=""/>
-	<property name="SoundSense" value=""/>
-	<property name="SoundGiveUp" value=""/>	
-	
-
-
-
-	<property name="MoveSpeed" value=".8"/>
-	<property name="MoveSpeedAggro" value="1.4, 1.6"/>
-	<property name="MaxTurnSpeed" value="150"/>
-	<property name="HandItem" value="meleeHandAnimalSkullBird"/>
-	
-	<property name="ExperienceGain" value="3100"/> 
-	<property name="DeadBodyHitPoints" value="350"/>
-	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-	<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="0"/>
-	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>	
-
-	<effect_group name="Base Effects">
-	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SkullPrefab"/>	
-		<passive_effect name="HealthMax" operation="base_set" value="400"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
-		<passive_effect name="EntityDamage" operation="perc_add" value=".4"/> 
-		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3"/>
-		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
-	</effect_group>
-</entity_class>
--->
 <entity_class name="animalWaterRaion" extends="animalMountainLion">
 	<property name="Tags" value="entity,animal,hostile"/>
 	<property name="SizeScale" value="1.1"/>	
@@ -1258,7 +1329,7 @@
 	<property name="SoundGiveUp" value="mliongiveup"/>
 	<property name="SightRange" value="90"/>	
 	<!-- Gameplay -->
-	<property name="HandItem" value="meleehandZombieAqua"/>
+	<property name="HandItem" value="meleeHandZombieAqua"/>
 	<property name="MoveSpeed" value="1"/>
 	<property name="MoveSpeedAggro" value="1.3, 2.1"/>
 	<property name="MoveSpeedPanic" value="2.2"/>	
@@ -1272,9 +1343,8 @@
 	<drop event="Harvest" name="drinkJarRiverWater" count="1" tag="WasteTreasuresCompleteHarvest"/>
 	<effect_group name="Base Effects">	
 		<passive_effect name="HealthMax" operation="base_set" value="222"/>
-		<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+		<passive_effect name="HealthMax" operation="perc_add" value="0"/> 
 	</effect_group>
 </entity_class>
-
 </append>
 </configs>
