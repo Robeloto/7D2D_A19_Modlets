@@ -47,11 +47,13 @@
 <item name="chemistryStationSchematic" prob="0.01"><!-- no prob in original -->
 </item>
 </append>
-<!-- Remove wrench schematics from schematic tools -->
+<!-- Remove wrench and Ratchet schematics from schematic tools -->
 <remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT0']/item[@name='meleeToolSalvageT1WrenchSchematic']" />
-<!-- make a wrench yourself -->
+<remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT1']/item[@name='meleeToolSalvageT2RatchetSchematic']" />
+<!-- make a wrench and ratchet yourself -->
 <remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1Wrench']/item[@name='meleeToolSalvageT1Wrench']" />
 <remove xpath="/lootcontainers/lootgroup[@name='groupToolsT1']/item[@name='meleeToolSalvageT1Wrench']" />
+<remove xpath="/lootcontainers/lootgroup[@name='groupToolsT2']/item[@name='meleeToolSalvageT2Ratchet']" />
 <!-- make a crucible yourself -->
 <remove xpath="/lootcontainers/lootgroup[@name='schematicsToolsT2']/item[@name='toolForgeCrucibleSchematic']" />
 <remove xpath="/lootcontainers/lootgroup[@name='workstationToolsScaled']/item[@name='toolForgeCrucible']" />
@@ -59,7 +61,7 @@
 <set xpath="/lootcontainers/lootgroup[@name='groupBuriedLootStashTreasure']/item[@name='casinoCoin']/@count">1200,4000</set> <!-- original: 3000, 8000 -->
 <!-- nerf nailgun loot chance -->
 <append xpath="/lootcontainers/lootgroup[@name='groupToolsT3']">
-<item name="meleeToolRepairT3Nailgun" prob="0.3">
+<item name="meleeToolRepairT3Nailgun" prob="0.2">
 </item>
 </append>
 <!-- Less drinks from this lootgroup -->
@@ -68,7 +70,7 @@
 <set xpath="/lootcontainers/lootcontainer[@id='36']/item[@name='drinkJarBoiledWater']/@count">1</set><!-- original:1,2 -->
 <!-- Less water from fridges -->
 <set xpath="/lootcontainers/lootcontainer[@id='47']/item[@name='drinkJarBoiledWater']/@count">1</set><!-- original:1,2 -->
-<set xpath="/lootcontainers/lootcontainer[@id='47']/item[@prob='0.5']/@prob">0.4</set>
+<set xpath="/lootcontainers/lootcontainer[@id='47']/item[@prob='0.5']/@prob">0.3</set>
 <!-- Quest reward ammo nerf -->
 <set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletBall']/@count">50</set>         <!-- original:200 -->
 <set xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletHP']/@count">30</set>           <!-- original:100 -->

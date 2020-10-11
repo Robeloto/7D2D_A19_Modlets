@@ -3,6 +3,7 @@
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']/item[@name='meleeToolPickT3Auger']"/>
 <!-- make your own steel pickaxe -->
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']/item[@name='meleeToolPickT2SteelPickaxe']"/>
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']/item[@name='meleeToolSalvageT2Ratchet']"/>
 <!-- make your own steel sledgehammer -->
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']/item[@name='meleeWpnSledgeT3SteelSledgehammer']"/>
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='weaponsMeleeT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']"/>
@@ -11,6 +12,8 @@
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']/item[@name='toolForgeCrucible']"/>
 <!-- Make a wrench yourself -->
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='tools']/item[@name='meleeToolSalvageT1Wrench']"/>
+<!-- removing wrench schematic from trader -->
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsToolsCommon']/item[@name='meleeToolSalvageT1WrenchSchematic']"/>
 <!-- Make an iron pickaxe yourself or do quest -->
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='tools']/item[@name='meleeToolPickT1IronPickaxe']"/>
 <!-- make forged iron/steel yourself -->
@@ -43,6 +46,7 @@
 <set xpath="/traders/trader_item_groups/trader_item_group[@name='constructionSupplies']/item[@name='resourceCement']/@count">20,60</set> <!-- original: 50,500 -->
 <set xpath="/traders/trader_item_groups/trader_item_group[@name='constructionSupplies']/item[@name='resourceCobblestones']/@count">20,50</set> <!-- original: 50,500 -->
 <set xpath="/traders/trader_item_groups/trader_item_group[@name='constructionSupplies']/item[@name='resourceConcreteMix']/@count">20,50</set> <!-- original: 100,500 -->
+<set xpath="/traders/trader_item_groups/trader_item_group[@name='books']/item[@group='schematicsToolsRare']/@prob">0.005</set>
 <!-- Trader Nerf -->
 <set xpath="/traders/trader_info[@id='1']/@min_inventory">15</set>
 <set xpath="/traders/trader_info[@id='1']/@max_inventory">30</set>
