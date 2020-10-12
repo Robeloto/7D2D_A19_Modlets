@@ -452,13 +452,13 @@
 	<property name="HandItem" value="meleeHandZombieGeist"/>
 	<property name="AITask-1" value=""/>
 	<property name="AITarget-1" value=""/>
-	<property name="SightRange" value="300"/>
+	<property name="SightRange" value="300"/>	
 	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="1100"/>		
 		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 		<triggered_effect trigger="onSelfExplosionDamagedOther" action="AddBuff" target="other" buff="buffShocked2"/>
-		<passive_effect name="HealthMax" operation="base_set" value="1100"/>
 	</effect_group>
 </entity_class>
 
@@ -468,7 +468,7 @@
 	<property name="JumpMaxDistance" value="10, 20"/>			
 	<!-- Gameplay -->
 	<property name="HandItem" value="meleeHandZombieGiant"/>
-<property name="ReplaceMaterial0" value="entities/gore/materials/torso_gore"/>
+	<property name="ReplaceMaterial0" value="entities/gore/materials/torso_gore"/>
 	<property name="MoveSpeedAggro" value=".4, 1.4"/>	
 	<property name="SightRange" value="160"/>	
 	<property name="SizeScale" value="2.15"/>	
@@ -767,11 +767,12 @@
 <!-- Snufkins scarecrow zombie, all credits go to Snufkin -->
 <entity_class name="zombieSc4recrow" extends="Zombie_Template">
 	<property name="Archetype" value="Sc4recrow" />
-	<property name="Tags" value="entity,zombie,walker,boss,umazombie,sc4recrow" />
+	<property name="Tags" value="entity,zombie,walker,boss,umazombie,scarecrow" />
 	<property name="WalkType" value="7"/>
 	<property name="PhysicsBody" value="nolegsUMA" />
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-	<property name="LootDropProb" value="0.2"/>
+	<property name="LootDropProb" value="1"/>
+	<property name="SurfaceCategory" value="wood"/>
 	<property name="SoundRandom" value="Enemies/Burnt_Zombie/zombieburntroam"/>
 	<property name="SoundSpawn" value="Ambient_Loops/a_fire_embersmoke_sm_lp"/>
 	<property name="SoundAlert" value="Enemies/Burnt_Zombie/zombieburntalert"/>
@@ -783,14 +784,14 @@
 	<property name="ExperienceGain" value="1500"/>
 	<property name="SoundFootstepModifier" value=""/>
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="500"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="scarecrowPrefab"/>
-		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
-		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
-		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	<passive_effect name="HealthMax" operation="base_set" value="550"/>
+	<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ScarecrowPrefab"/>
+	<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 	</effect_group>
-</entity_class>		
+</entity_class>	
 
 <entity_class name="zombieScreamerBoss" extends="zombieTemplateMale">  
     <property name="SizeScale" value="1.4"/>	
