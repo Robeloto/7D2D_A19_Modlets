@@ -411,7 +411,7 @@
 	</buff>	
 
 	<!-- Snufkins scarecrow zombie, all credits go to Snufkin -->
-	<buff name="scarecrowPrefab" hidden="true">
+	<buff name="ScarecrowPrefab" hidden="true">
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Plants/pumpkinJackoLanternPrefab" local_offset="-.5,0,0" local_rotation="0,0,90" parent_transform="Head"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="0,0,0" local_rotation="0,0,0" parent_transform="RightHand"/>
@@ -434,8 +434,8 @@
 	
 	<buff name="FireParticle" hidden="true">
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_fire_small" local_offset=".0,0,0" local_rotation="0,0,0" parent_transform="Head"/>					
-			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_fire_small" />			
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_onFire" shape_mesh="true" local_offset=".0,0,0" local_rotation="0,0,0" parent_transform="Head"/>					
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire" />			
 		</effect_group>
 	</buff>
 			
