@@ -96,7 +96,7 @@
 	<property name="Group" value="Tools/Traps" />
 	<property name="RepairExpMultiplier" value="10.8" />
 	<property name="EconomicValue" value="1500" />
-	<property name="UnlockedBy" value="perkAdvancedEngineering,meleeToolAugerSchematic" />
+	<property name="UnlockedBy" value="meleeToolPickT3AugerSchematic" />
 	<property name="ShowQuality" value="true" />
 
 	<property class="Action0">
