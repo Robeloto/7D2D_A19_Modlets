@@ -79,7 +79,7 @@
 		</effect_group>
 	</buff>
 	
-		<buff name="buffDark" name_key="Blind" description_key="buffDarkDesc" tooltip_key="buffDarkDesc" icon="ui_game_symbol_stunned" icon_color="255,255,255">
+	<buff name="buffDark" name_key="Blind" description_key="buffDarkDesc" tooltip_key="buffDarkDesc" icon="ui_game_symbol_stunned" icon_color="255,255,255">
 		<damage_type value="disease"/>
 		<stack_type value="replace"/><duration value="8"/>
 		<effect_group>		
@@ -93,7 +93,7 @@
 		</effect_group>
 	</buff>
 	
-		<buff name="buffExploderTimerStart" name_key="" tooltip_key="" icon="ui_game_symbol_skull" icon_color="255,255,255" icon_blink="true">
+	<buff name="buffExploderTimerStart" name_key="" tooltip_key="" icon="ui_game_symbol_skull" icon_color="255,255,255" icon_blink="true">
 		<stack_type value="ignore"/>
 		<duration value="20"/>
 		<update_rate value="0.38"/>
@@ -102,7 +102,7 @@
 		</effect_group>
 	</buff>	
 	
-		<buff name="buffExploderHealthLoss" name_key="" tooltip_key="" icon="ui_game_symbol_skull" icon_color="255,255,255" icon_blink="true">
+	<buff name="buffExploderHealthLoss" name_key="" tooltip_key="" icon="ui_game_symbol_skull" icon_color="255,255,255" icon_blink="true">
 		<stack_type value="ignore"/>
 		<duration value="1"/>
 		<update_rate value="99999"/>
@@ -155,15 +155,15 @@
 		<update_rate value="1"/>
 			<effect_group>
 			<requirement name="EntityTagCompare" tags="player"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="2" effect_name="Radiation"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0" fade="2" effect_name="Radiation"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation"/>			
 			<passive_effect name="EntityDamage" operation="perc_subtract" value="0.8">
 				<requirement name="HoldingItemHasTags" tags="ranged"/>
 			</passive_effect>
-			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.4">
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.3">
 				<requirement name="HoldingItemHasTags" tags="ranged"/>
 			</passive_effect>
-			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.4">
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.3">
 				<requirement name="HoldingItemHasTags" tags="ranged"/>
 			</passive_effect>
 			<passive_effect name="EntityDamage" operation="perc_add" value="0.4">
@@ -469,6 +469,13 @@
 			<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="RightShoulder" transform_path="body_mesh"/>			
 			</effect_group>
 	</buff>
+	
+	<buff name="CandyPrefab" hidden="true">
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Candycane/candycaneShivPrefab.prefab" local_offset=".085,.03,-.03" local_rotation="80,30,200" parent_transform="RightHand"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Candycane/candycaneShivPrefab.prefab" local_offset="-.12,-.03,.04" local_rotation="35,30,70" parent_transform="LeftHand"/>		
+			</effect_group>
+	</buff>
 			
 	<buff name="CopterPrefab" hidden="true">		
 		<effect_group>
@@ -499,7 +506,7 @@
 		</effect_group>
 	</buff>	
 	
-		<!-- Snufkins scarecrow zombie, all credits go to Snufkin -->
+	<!-- Snufkins scarecrow zombie, all credits go to Snufkin -->
 	<buff name="scarecrowPrefab" hidden="true">
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Plants/pumpkinJackoLanternPrefab" local_offset="-.5,0,0" local_rotation="0,0,90" parent_transform="Head"/>
@@ -522,8 +529,10 @@
 	
 	<buff name="FireParticle" hidden="true">
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_fire_small" local_offset=".0,0,0" local_rotation="0,0,0" parent_transform="Head"/>					
-			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_fire_small" />			
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset=".15,-.1,0" local_rotation="0,0,0" parent_transform="RightHand"/>					
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="-.15,-.12,0" local_rotation="0,0,0" parent_transform="LeftHand"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_torch_wall" />		
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_torch_wall" />				
 		</effect_group>
 	</buff>
 			

@@ -25,24 +25,29 @@
 	<ingredient name="drinkJarYuccaJuice" count="1"/>
 </recipe>
 
-<recipe name="armorSteelBootsOfHaste" count="1" craft_time="9999" craft_area="workbench" tags="learnable,workbenchCrafting">
+<recipe name="armorSteelBootsOfHaste" count="1" craft_time="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
 	<ingredient name="armorSteelSetParts" count="30"/>
-	<ingredient name="resourceForgedSteel" count="2"/>
 	<ingredient name="resourceFeather" count="10000"/>	
 	<ingredient name="resourceLeather" count="40"/>
 	<ingredient name="resourceDuctTape" count="10"/>
 	<ingredient name="resourceSewingKit" count="35"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="armorSteelSetParts,resourceFeather,resourceLeather,resourceDuctTape,resourceSewingKit"/>
+	</effect_group>
 </recipe>
 
-<recipe name="armorMagicPlateArmor" count="1" craft_time="9999" craft_area="workbench" tags="learnable,workbenchCrafting">
+<recipe name="armorMagicPlateArmor" count="1" craft_time="1" craft_area="workbench" tags="learnable,perkHeavyArmor">
 	<ingredient name="armorSteelSetParts" count="60"/>
 	<ingredient name="resourceForgedSteel" count="1000"/>
 	<ingredient name="resourceLeather" count="60"/>
 	<ingredient name="resourceDuctTape" count="25"/>
 	<ingredient name="resourceSewingKit" count="60"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="armorSteelSetParts,resourceForgedSteel,resourceLeather,resourceDuctTape,resourceSewingKit"/>
+	</effect_group>	
 </recipe>
 
-<recipe name="gunToolSuperNailgun" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+<recipe name="gunToolSuperNailgun" count="1" craft_area="workbench" tags="learnable">
 	<ingredient name="resourceForgedSteel" count="65"/>
 	<ingredient name="resourceMechanicalParts" count="65"/>
 	<ingredient name="resourceDuctTape" count="10"/>
