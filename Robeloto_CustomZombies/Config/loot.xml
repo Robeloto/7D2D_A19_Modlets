@@ -3,6 +3,7 @@
 <append xpath="/lootcontainers/lootgroup">
 
 <lootgroup name="groupQuestChallenge">
+<item name="VeteranKiller"/>
 <item name="KillTheMummy"/>
 <item name="KillSomeGhosts"/>
 </lootgroup>
@@ -33,8 +34,9 @@
 <append xpath="/lootcontainers">
 
 <lootgroup name="RobelotoQuests">
-	<item name="KillTheMummy" count="1" prob="0.5"/>
-	<item name="KillSomeGhosts" count="1" prob="0.5"/>
+	<item name="KillTheMummy" count="1" prob="0.3"/>
+	<item name="KillSomeGhosts" count="1" prob="0.3"/>
+	<item name="VeteranKiller" count="1" prob="0.06"/>	
 </lootgroup>
 </append>
 

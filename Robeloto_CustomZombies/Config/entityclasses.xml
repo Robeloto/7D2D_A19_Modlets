@@ -165,6 +165,7 @@
 	<property name="HandItem" value="meleeHandZombieBurningMan"/>
 	<property name="HandItemCrawler" value="meleeHandZombieBurningCrawler"/> <!-- override the default replacement of meleeHandZombie02 with a specific hand item -->	
 	<effect_group name="Base Effects">		
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="FireParticle"/>	
 		<passive_effect name="HealthMax" operation="base_set" value="260"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 	</effect_group>
@@ -200,6 +201,7 @@
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>	
 	<property name="LootDropProb" value=".19"/>		
 	<effect_group name="Base Effects">	
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="FireParticle"/>		
 		<passive_effect name="HealthMax" operation="base_set" value="500"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
 	</effect_group>
@@ -232,6 +234,7 @@
 	<property name="LootDropProb" value=".15"/> 
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="CandyPrefab"/>		
 		<passive_effect name="HealthMax" operation="base_set" value="400"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> 	
 	</effect_group>
@@ -258,8 +261,7 @@
 	<property name="ExperienceGain" value="2900"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 	<property name="LootDropProb" value=".17"/>	
-	<effect_group name="Base Effects">	
-		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SparkParticle"/>		
+	<effect_group name="Base Effects">		
 		<passive_effect name="HealthMax" operation="base_set" value="400"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 		<passive_effect name="WalkSpeed" operation="base_set" value="2"/>
@@ -351,6 +353,7 @@
 	<effect_group name="Base Effects">	
 		<passive_effect name="HealthMax" operation="base_set" value="1024"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="FireParticle"/>			
 		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>			
 		<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>		
 		<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/> <!-- Boss regen, 1% -->	
@@ -377,6 +380,7 @@
 	<property name="HandItem" value="meleeHandZombieElf"/>
 	<property name="ExperienceGain" value="3000"/> <!-- XP strong -->	
 	<effect_group name="Base Effects">	
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="FireParticle"/>		
 		<passive_effect name="HealthMax" operation="base_set" value="700"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->	
 	</effect_group>
@@ -834,7 +838,7 @@
 
 <entity_class name="zombieShockerFeral" extends="zombieTemplateMale">
 	<property name="Tags" value="entity,zombie,walker"/>
-	<property name="ReplaceMaterial0" value="itemmodeffects/materials/baton_arc"/>	
+<property name="ReplaceMaterial0" value="itemmodeffects/materials/baton_arc_fp"/>
 	<property name="ReplaceMaterial1" value="particleeffects/materials/p_spark_electricity"/>		
 	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/>	
 	<property name="WalkType" value="5"/>
@@ -853,6 +857,7 @@
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 	<property name="LootDropProb" value=".28"/>		
 	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SparkParticle"/>		
 		<passive_effect name="HealthMax" operation="base_set" value="900"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 	</effect_group>
@@ -876,7 +881,8 @@
 	<property name="HandItem" value="meleeHandZombieShocker"/>
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 	<property name="LootDropProb" value=".2"/>		
-	<effect_group name="Base Effects">			
+	<effect_group name="Base Effects">		
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="SparkParticle"/>		
 		<passive_effect name="HealthMax" operation="base_set" value="600"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->		
 	</effect_group>
