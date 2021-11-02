@@ -2,9 +2,9 @@
 <xml>
 	<ModInfo>
 		<Name value="RobelotoLoudSoundsLowered" />
-		<Description value="An XML-only mod - Lower sounds like auger, chainsaw and wrench." />
+		<Description value="Lower sounds like auger, chainsaw and wrench." />
 		<Author value="Robeloto" />
-		<Version value="19.0" />
+		<Version value="19.6" />
 		<Website value="" />
 	</ModInfo>
 </xml>
