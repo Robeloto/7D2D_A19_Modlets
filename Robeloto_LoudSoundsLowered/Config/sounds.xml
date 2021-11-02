@@ -54,7 +54,7 @@
 <set xpath="/Sounds/SoundDataNode[@name='close_vending']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?close_vending</set>	 
 <set xpath="/Sounds/SoundDataNode[@name='ui_vending_purchase']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?ui_vending_purchase</set>	  
 <set xpath="/Sounds/SoundDataNode[@name='ui_trader_purchase']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?ui_trader_purchase</set>	
-<set xpath="/Sounds/SoundDataNode[@name='ui_trader_inventory_reset']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?ui_trader_inventory_reset</set>
+<set xpath="/Sounds/SoundDataNode[@name='ui_trader_inv_reset']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?ui_trader_inventory_reset</set>
 <!-- Trees -->
 <set xpath="/Sounds/SoundDataNode[@name='treefallimpact']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?treefallimpact1</set> 
 <set xpath="/Sounds/SoundDataNode[@name='treefallimpact']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?treefallimpact2</set> 
