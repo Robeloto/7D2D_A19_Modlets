@@ -25,7 +25,7 @@
         <objective type="ZombieKill" id="zombieMummy" value="1"/> 		
         <objective type="ZombieKill" id="zombieSanguis" value="1"/>
         <objective type="ZombieKill" id="zombieShocker" value="1"/>   
-		<objective type="ZombieKill" id="zombieWhiteNoise" value="1"/>   		
+		<objective type="ZombieKill" id="zombieTranslucent" value="1"/>   		
         
 		<reward type="Exp" value="5000"/>		
 		<reward type="Quest" id="rchallenge_VeteranKillerP2"/>
@@ -47,7 +47,7 @@
 		<objective type="ZombieKill" id="zombieFireBoss" value="1"/>		
 		<objective type="ZombieKill" id="zombieGunner" value="1"/>
 		<objective type="ZombieKill" id="zombiePredator" value="1"/>	
-		<objective type="ZombieKill" id="zombieScreamerBoss" value="1"/>
+		<objective type="ZombieKill" id="zombieRPG" value="1"/>
 		<objective type="ZombieKill" id="zombieShadow" value="1"/> 		        
    
 		<objective type="InteractWithNPC">
