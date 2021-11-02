@@ -51,10 +51,10 @@
 <set xpath="/Sounds/SoundDataNode[@name='trader_announce_closing']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?trader_announce_closing</set>
 <set xpath="/Sounds/SoundDataNode[@name='trader_announce_closed']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?trader_announce_closed</set>	
 <set xpath="/Sounds/SoundDataNode[@name='open_vending']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?open_vending</set>	 
-<set xpath="/Sounds/SoundDataNode[@name='closed_vending']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?closed_vending</set>	 
+<set xpath="/Sounds/SoundDataNode[@name='close_vending']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?close_vending</set>	 
 <set xpath="/Sounds/SoundDataNode[@name='ui_vending_purchase']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?ui_vending_purchase</set>	  
 <set xpath="/Sounds/SoundDataNode[@name='ui_trader_purchase']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?ui_trader_purchase</set>	
-<set xpath="/Sounds/SoundDataNode[@name='ui_trader_inventory_reset']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?ui_trader_inventory_reset</set>	
+<set xpath="/Sounds/SoundDataNode[@name='ui_trader_inventory_reset']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?ui_trader_inventory_reset</set>
 <!-- Trees -->
 <set xpath="/Sounds/SoundDataNode[@name='treefallimpact']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?treefallimpact1</set> 
 <set xpath="/Sounds/SoundDataNode[@name='treefallimpact']/AudioClip/@ClipName">#@modfolder:Resources/loudsoundslowered.unity3d?treefallimpact2</set> 
