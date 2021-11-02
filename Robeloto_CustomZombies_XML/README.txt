@@ -5,9 +5,9 @@ New zombies added
 Atrocity
 RPG
 
-Fixed Giant and predator
+Fixed Giant and Predator
 
-Screamerboss and cloaker removed
+Screamerboss and Cloaker removed
 
 --------------------------------------------------------
 Zombies from Snufkins server side zombies has been added.
