@@ -1055,11 +1055,10 @@
 	</effect_group>
 </entity_class>
 
-	<entity_class name="zombieWhiteNoise" extends="zombieTemplateMale">
+	<entity_class name="zombieTranslucent" extends="zombieTemplateMale">
 	<property name="Tags" value="entity,zombie,walker"/>	
 	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/>		
-	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_glass"/>
-	<property name="ReplaceMaterial1" value="materials/occludeeshadowcaster"/>		
+	<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_glass"/> 
 	<property name="WalkType" value="2"/>	
 	<property name="Mass" value="100"/>	
 	<property name="SizeScale" value="1.2"/>	
@@ -1068,7 +1067,7 @@
 	<property name="SoundFootstepModifier" value="bear_footstep"/>	
 	<property name="JumpMaxDistance" value="10, 20"/>
     <property name="MoveSpeedAggro" value="1.2, 1.7"/>	
-	<property name="HandItem" value="meleeHandZombieWhiteNoise"/>
+	<property name="HandItem" value="meleeHandZombieTranslucent"/>
 	<property name="ExperienceGain" value="3300"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 	<property name="LootDropProb" value=".35"/>	
@@ -1082,6 +1081,7 @@
 		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffNoiseAOE01"/>		
 	</effect_group>
 </entity_class>
+
 <!-- -->
 
 <!-- ANIMALS -->
