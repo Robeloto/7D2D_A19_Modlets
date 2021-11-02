@@ -688,40 +688,52 @@
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> 
 	</SoundDataNode>
 	
-<SoundDataNode name="zombiefemalescoutalertcustom"> <AudioSource name="Sounds/AudioSource_Screamer"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutalert1"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutalert2"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutalert3"/>		
+<SoundDataNode name="atrobuffscream"> <AudioSource name="Sounds/AudioSource_Screamer"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atrobuffscream1"/>
+	<Channel name="Mouth"/>
+	<Priority name="3"/>
+  <maxVoicesPerEntity value="1"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
+	</SoundDataNode>
+
+<SoundDataNode name="atrobuffscream2"> <AudioSource name="Sounds/AudioSource_Notifications"/>
+	<AudioClip ClipName="Sounds/Ambient_Oneshots/a_horde_oneshot2"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1"/>
+	</SoundDataNode>
+	
+<SoundDataNode name="atroalert"> <AudioSource name="Sounds/AudioSource_Screamer"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atroalert1"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atroalert2"/>		
 	<Channel name="Mouth"/>
 	<Priority name="3"/>
   <maxVoicesPerEntity value="1"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
 	</SoundDataNode>
 		
-<SoundDataNode name="zombiefemalescoutattackcustom"> <AudioSource name="Sounds/AudioSource_Screamer"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutattack1"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutattack2"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutattack3"/>		
+<SoundDataNode name="atroattack"> <AudioSource name="Sounds/AudioSource_Screamer"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atroattack1"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atroattack2"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atroattack3"/>		
 	<Channel name="Mouth"/>
 	<Priority name="2"/>
   <maxVoicesPerEntity value="1"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.8"/> 
 	</SoundDataNode>
 			
-<SoundDataNode name="zombiefemalescoutdeathcustom"> <AudioSource name="Sounds/AudioSource_Pain"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutdeath1"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutdeath2"/>		
+<SoundDataNode name="atrodeath"> <AudioSource name="Sounds/AudioSource_Pain"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atrodeath1"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atrodeath2"/>		
 	<Channel name="Mouth"/>
 	<Priority name="0"/>
   <maxVoicesPerEntity value="1"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> 
 	</SoundDataNode>
 
-<SoundDataNode name="zombiefemalescoutroamcustom"> <AudioSource name="Sounds/AudioSource_Screamer"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutroam1"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutroam2"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutroam3"/>
-	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?zombiefemalescoutroam4"/>	
+<SoundDataNode name="atroroam"> <AudioSource name="Sounds/AudioSource_Screamer"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atroroam1"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atroroam2"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atroroam3"/>
+	<AudioClip ClipName="#@modfolder:Resources/robelotozombiesounds.unity3d?atroroam4"/>	
 	<Channel name="Mouth"/>
 	<Priority name="5"/>
   <maxVoicesPerEntity value="1"/>

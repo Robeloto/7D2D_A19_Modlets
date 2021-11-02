@@ -75,8 +75,52 @@
 		<triggered_effect trigger="onSelfBuffStart"  target="self" action="ModifyStats" stat="Health" operation="subtract" value="174" duration="1"/>	
 		</effect_group>
 	</buff>	
-		
-			
+	
+		<buff name="buffAtroScream" hidden="true">
+			<update_rate value="15"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="Atrobuffscream"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="positionAOE" range="15" buff="buffAtro"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffAtro" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="4"/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="1,.3" duration="0,5">
+				<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="1,.3" duration="0,5">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="1,.3" duration="0,5">
+					<requirement name="EntityTagCompare" tags="player"/>	
+				</passive_effect>					
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="1,.3" duration="0,5">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="2" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity=".4" fade="1" effect_name="Posterize"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity=".6" fade="1" effect_name="Radiation" />
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1.5" fade="1" effect_name="Drunk" />
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>				
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Posterize" />	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation" />				
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Drunk"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Posterize" />	
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation" />	
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Drunk" />
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="atrobuffscream" play_in_head="true">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="atrobuffscream2" play_in_head="true">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+				
 	<buff name="buffNoiseAOE01" hidden="true">
 		<duration value=".3"/>
 		<effect_group>
@@ -410,8 +454,14 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="IronPrefab" hidden="true">
+	<buff name="RPGPrefab" hidden="true">
 		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/RocketLauncher/rocketlauncherPrefab.prefab" local_offset="-.11,-.1,.1" local_rotation="0,0,-101" parent_transform="RightShoulder"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="IronPrefab" hidden="true">
+		<effect_group>	
 				<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/pickaxe_ironPrefab.prefab" local_offset=".1,.01,0" local_rotation="0,50,-75" parent_transform="RightHand"/>							
 				<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/pickaxe_ironPrefab.prefab" local_offset="-.1,-.02,0" local_rotation="0,-90,-75" parent_transform="LeftHand"/>													
 		</effect_group>
