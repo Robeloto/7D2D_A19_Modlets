@@ -1962,7 +1962,7 @@
 		<property name="Range" value="200"/>
 		<property name="Infinite_ammo" value="true"/>
 		<property name="Magazine_items" value="ammoProjectileRPG" />
-		<property name="Sound_warning" value=""/>
+		<property name="Sound_warning" value="rpg_vomit"/>
 		<property name="Sound_start" value="m136_fire"/>	
 	</property>
 		<effect_group name="meleeHandZombieRPG" tiered="false">
@@ -2030,7 +2030,7 @@
 	</property>
 <effect_group name="meleeHandZombieCandy" tiered="false">
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="1.65"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".28" tags="buffCandy"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".38" tags="buffCandy"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".09" tags="buffInfectionCatch"/>
 	</effect_group>
 </item>

@@ -35,10 +35,10 @@
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="2" effect_name="Drunk"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Drunk"/>
 			
-			<passive_effect name="RunSpeed" operation="perc_add" value="10" duration="0,4"/>
-			<passive_effect name="WalkSpeed" operation="perc_add" value="10" duration="0,4"/>
-			<passive_effect name="CrouchSpeed" operation="perc_add" value="10" duration="0,4"/>
-			<passive_effect name="JumpStrength" operation="perc_add" value="4" duration="0,4"/>		
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".5" duration="0,4"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".5" duration="0,4"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value=".5" duration="0,4"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value=".2" duration="0,4"/>		
 		</effect_group>
 	</buff>
 	 
@@ -135,7 +135,7 @@
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="20" buff="buffNoiseAOE"/>
 		</effect_group>
 	</buff>
-	<buff name="buffNoiseAOE" name_key="" tooltip_key="White Noise has the ability to penalize you, if you used ranged weapons" icon="ui_game_symbol_muscle" icon_color="255,255,255" icon_blink="true">
+	<buff name="buffNoiseAOE" name_key="" tooltip_key="Translucent have the ability to penalize you, if you used ranged weapons" icon="ui_game_symbol_muscle" icon_color="255,255,255" icon_blink="true">
 		<stack_type value="replace"/>
 		<duration value="2"/>
 		<update_rate value="1"/>
