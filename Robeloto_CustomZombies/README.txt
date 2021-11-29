@@ -1,3 +1,14 @@
+2021-11-15
+Added rocket launcher loading sound for the RPG zombie 
+New look for freezer and giant
+Candygirl now slows you down instead of giving you speed
+
+
+CREDITS:
+
+Custom sound for RPG puke comes from this channel:
+(https://www.youtube.com/channel/UCET-MNl5am8S8CQcZHPHAsw - Credit goes to Digital Stock Sounds)
+
 2021-11-02
 
 New zombies added
@@ -5,9 +16,9 @@ New zombies added
 Atrocity
 RPG
 
-Fixed Giant and Predator
+Fixed Giant and predator
 
-Screamerboss and Cloaker removed
+Screamerboss and cloaker removed
 
 --------------------------------------------------------
 Zombies from Snufkins server side zombies has been added.
