@@ -394,10 +394,9 @@
 	</effect_group>
 </entity_class>
 
-	<entity_class name="zombieFreezer" extends="zombieTemplateMale">
-	<property name="Tags" value="entity,zombie,walker"/>	
-	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardSnowRagdoll.prefab"/>	
-	<property name="ReplaceMaterial0" value="entities/buildings/materials/glass_industrial_lod"/>
+<entity_class name="zombieFreezer" extends="Zombie_Template">
+	<property name="Tags" value="entity,zombie,walker,umazombie,freezer,boss"/>	
+	<property name="Archetype" value="Freezer" />	
 	<property name="WalkType" value="2"/>	
 	<property name="Mass" value="150"/>	
 	<property name="RightHandJointName" value="RightHand"/>
@@ -414,9 +413,9 @@
 	<property name="HandItem" value="meleeHandZombieFreezer"/>
 	<property name="ExperienceGain" value="3100"/> <!-- XP strong -->
 	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
-	<property name="LootDropProb" value=".16"/>	
+	<property name="LootDropProb" value=".16"/>
 	<effect_group name="Base Effects">	
-		<passive_effect name="HealthMax" operation="base_set" value="450"/>
+		<passive_effect name="HealthMax" operation="base_set" value="455"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 	</effect_group>
 </entity_class>
@@ -780,6 +779,7 @@
 	<property name="SoundAttack" value=""/>	
 	<property name="SoundFootstepModifier" value="bear_footstep"/>	
 	<property name="PainResistPerHit" value="1"/>
+	<property name="MoveSpeedAggro" value="0.5, 0.9"/>	
 	<property name="HandItem" value="meleeHandZombieRPG"/>
 	<property name="ExperienceGain" value="5000"/> <!-- XP strong -->	
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
@@ -1250,7 +1250,7 @@
 <entity_class name="animalCopterCorpse" extends="animalZombieVultureRadiated">
 	<property name="Tags" value="entity,animal,zombie,hostile,radiated"/>
 	<property name="Radiated" value=""/>
-	<property name="SizeScale" value="1.15"/>	
+	<property name="SizeScale" value="1.2"/>	
 	<property name="SightRange" value="180"/>
 	<property name="SurfaceCategory" value="metal"/>	
     <property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>
@@ -1277,7 +1277,7 @@
 
 	<effect_group name="Base Effects">
 	<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="CopterPrefab"/>	
-		<passive_effect name="HealthMax" operation="base_set" value="400"/>
+		<passive_effect name="HealthMax" operation="base_set" value="90"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".4"/> <!-- Feral damage -->
 	</effect_group>

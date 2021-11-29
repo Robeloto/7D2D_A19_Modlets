@@ -1887,7 +1887,7 @@
 	</property>
 <effect_group name="meleeHandZombieCandy" tiered="false">
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="1.65"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".28" tags="buffCandy"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".38" tags="buffCandy"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".09" tags="buffInfectionCatch"/>
 	</effect_group>
 </item>
