@@ -189,9 +189,9 @@
 		<damage_type value="disease"/>
 		<stack_type value="replace"/><duration value="8"/>
 		<effect_group>		
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="shadowbuff" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" sound="shadowbuff" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="shadowbuff" play_in_head="true"/>		
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="horde_spawn_warning" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" sound="horde_spawn_warning" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="horde_spawn_warning" play_in_head="true"/>		
 		</effect_group>			
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="2" effect_name="FadeToBlack"/>
@@ -203,9 +203,9 @@
 		<damage_type value="disease"/>
 		<stack_type value="replace"/><duration value="6"/>
 		<effect_group>		
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="freezerbuff" play_in_head="true"/>		
-			<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" sound="freezerbuff" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="freezerbuff" play_in_head="true"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="horde_spawn_warning" play_in_head="true"/>		
+			<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" sound="horde_spawn_warning" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="horde_spawn_warning" play_in_head="true"/>	
 		</effect_group>	
 		<effect_group>
 			<requirement name="NotHasBuff" buff="buffBlackStrapCoffee"/>			
