@@ -1083,8 +1083,8 @@
 		<property name="Range" value="200"/>
 		<property name="Infinite_ammo" value="true"/>
 		<property name="Magazine_items" value="ZombieRadRobotVomitProjectile"/>
-		<property name="Sound_warning" value=""/>
-		<property name="Sound_start" value=""/>
+		<property name="Sound_warning" value="hulkvomitwarning"/>
+		<property name="Sound_start" value="hulkvomitattack"/>
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
 		<property name="Sound_empty" value=""/>
