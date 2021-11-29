@@ -889,7 +889,7 @@
 	<property name="RootMotion" value="true"/>
 	<property name="HasDeathAnim" value="true"/>
 	<property name="AIPathCostScale" value=".5, .6"/>
-	<property name="HandItem" value="meleeHandZombieAtrocity"/>
+	<property name="HandItem" value="meleeHandZombieAtro"/>
 	<property name="JumpMaxDistance" value="8, 16"/>	
 	<property name="ExperienceGain" value="10000"/> <!-- XP grunt feral -->	
 	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>	
